@@ -1,0 +1,2726 @@
+<div>
+  <h2 id="page-heading" data-cy="Table1Heading">
+    <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.home.title">Table 1 S</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-table-1"
+        [routerLink]="['/accesssampleapplication/table-1/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.home.createLabel">Create a new Table 1</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (table1s?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.home.notFound">No Table 1 S found</span>
+    </div>
+  }
+
+  @if (table1s && table1s.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numLigne1">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne1">Num Ligne 1</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resort2">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort2">Resort 2</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resvNameId3">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId3">Resv Name Id 3</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientOId4">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId4">Client O Id 4</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChb5">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb5">Type Chb 5</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="confirmationNo6">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo6">Confirmation No 6</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientMdmId7">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId7">Client Mdm Id 7</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nameId8">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId8">Name Id 8</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="parentResvNameId9">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId9">Parent Resv Name Id 9</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contactId10">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId10">Contact Id 10</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceId11">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId11">Agence Id 11</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceNom12">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom12">Agence Nom 12</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="societeId13">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId13">Societe Id 13</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="groupeId14">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId14">Groupe Id 14</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numBloc15">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc15">Num Bloc 15</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeResv16">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv16">Type Resv 16</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutResv17">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv17">Statut Resv 17</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDebutResv18">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv18">Date Debut Resv 18</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateFinResv19">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv19">Date Fin Resv 19</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateDebutResv20">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv20"
+                  >Trunc Date Debut Resv 20</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateFinResv21">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv21"
+                  >Trunc Date Fin Resv 21</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateAnnResv22">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv22">Date Ann Resv 22</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pseudoRoomYn23">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn23">Pseudo Room Yn 23</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createurResv24">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv24">Createur Resv 24</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomCreateurResv25">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv25">Nom Createur Resv 25</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGarantie26">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie26">Code Garantie 26</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="flgDed27">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed27">Flg Ded 27</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePays28">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays28">Code Pays 28</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPays29">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays29">Lib Pays 29</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeNationalite30">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite30">Code Nationalite 30</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libNationalite31">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite31">Lib Nationalite 31</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeSource32">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource32">Code Source 32</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libSource33">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource33">Lib Source 33</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandSource34">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource34">Code Grand Source 34</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeOrigine35">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine35">Code Origine 35</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libOrigine36">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine36">Lib Origine 36</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeMarche37">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche37">Code Marche 37</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libMarche38">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche38">Lib Marche 38</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandMarche39">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche39">Code Grand Marche 39</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libGrandMarche40">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche40">Lib Grand Marche 40</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePrix41">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix41">Code Prix 41</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categPrix42">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix42">Categ Prix 42</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPrix43">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix43">Lib Prix 43</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numChb44">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb44">Num Chb 44</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChb45">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb45"
+                  >Description Type Chb 45</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChb46">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb46">Code Type Chb 46</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="classChb47">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb47">Class Chb 47</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="caractChb48">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb48">Caract Chb 48</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChbDeReservation49">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation49"
+                  >Type Chb De Reservation 49</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChbDeResv50">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv50"
+                  >Description Type Chb De Resv 50</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChbDeResv51">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv51"
+                  >Code Type Chb De Resv 51</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDeReservation52">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation52"
+                  >Statut De Reservation 52</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribution53">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution53"
+                  >Circuit Distribution 53</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribUserRegroup54">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup54"
+                  >Circuit Distrib User Regroup 54</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numCrs55">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs55">Num Crs 55</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeRefCrs56">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs56">Type Ref Crs 56</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="crsInsertDate57">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate57">Crs Insert Date 57</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateCreaResv58">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv58">Date Crea Resv 58</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datePremier59">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier59">Date Premier 59</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutPremier60">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier60">Statut Premier 60</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernier61">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier61">Date Dernier 61</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernier62">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier62">Statut Dernier 62</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernierPseudo63">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo63"
+                  >Date Dernier Pseudo 63</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernierPseudo64">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo64"
+                  >Statut Dernier Pseudo 64</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtCreaAnn65">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn65">Diff Dt Crea Ann 65</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtArrAnn66">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn66">Diff Dt Arr Ann 66</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="leadtime67">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime67">Leadtime 67</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="los68">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los68">Los 68</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="occupantsGroupe69">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe69">Occupants Groupe 69</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuitee70">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee70">Nb Nuitee 70</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuiteeNnDed71">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed71">Nb Nuitee Nn Ded 71</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbResvAnn72">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn72">Nb Resv Ann 72</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbAdu73">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu73">Nb Adu 73</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbEnf74">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf74">Nb Enf 74</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDayU75">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU75">Nb Pers Day U 75</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersArr76">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr76">Nb Pers Arr 76</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDep77">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep77">Nb Pers Dep 77</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersAnn78">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn78">Nb Pers Ann 78</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersNoshow79">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow79">Nb Pers Noshow 79</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDayU80">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU80">Nb Chb Day U 80</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbArr81">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr81">Nb Chb Arr 81</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDep82">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep82">Nb Chb Dep 82</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbAnn83">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn83">Nb Chb Ann 83</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbNoshow84">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow84">Nb Chb Noshow 84</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambre85">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre85"
+                  >Revenu Net Chambre 85</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambre86">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre86"
+                  >Revenu Taxe Chambre 86</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambreGlobal87">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal87"
+                  >Revenu Net Chambre Global 87</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambreGlobal88">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal88"
+                  >Revenu Taxe Chambre Global 88</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBq89">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq89">Revenu Net Bq 89</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBq90">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq90">Revenu Taxe Bq 90</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBqGlobal91">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal91"
+                  >Revenu Net Bq Global 91</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBqGlobal92">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal92"
+                  >Revenu Taxe Bq Global 92</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtra93">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra93">Revenu Net Extra 93</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtra94">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra94">Revenu Taxe Extra 94</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtraGlobal95">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal95"
+                  >Revenu Net Extra Global 95</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtraGlobal96">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal96"
+                  >Revenu Taxe Extra Global 96</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetTotal97">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotal97">Revenu Net Total 97</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeTotal98">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotal98">Revenu Taxe Total 98</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetTotalGlobal99">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotalGlobal99"
+                  >Revenu Net Total Global 99</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeTotalGlobal100">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotalGlobal100"
+                  >Revenu Taxe Total Global 100</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuChambre101">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuChambre101"
+                  >Prod Revenu Chambre 101</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuBq102">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuBq102">Prod Revenu Bq 102</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuExtra103">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuExtra103"
+                  >Prod Revenu Extra 103</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuTotal104">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuTotal104"
+                  >Prod Revenu Total 104</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodChambreNbNuitees105">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodChambreNbNuitees105"
+                  >Prod Chambre Nb Nuitees 105</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="techCreateDate106">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techCreateDate106">Tech Create Date 106</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="techUpdateDate107">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techUpdateDate107">Tech Update Date 107</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numLigne108">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne108">Num Ligne 108</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resort109">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort109">Resort 109</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resvNameId110">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId110">Resv Name Id 110</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientOId111">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId111">Client O Id 111</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChb112">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb112">Type Chb 112</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="confirmationNo113">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo113">Confirmation No 113</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientMdmId114">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId114">Client Mdm Id 114</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nameId115">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId115">Name Id 115</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="parentResvNameId116">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId116"
+                  >Parent Resv Name Id 116</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contactId117">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId117">Contact Id 117</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceId118">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId118">Agence Id 118</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceNom119">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom119">Agence Nom 119</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="societeId120">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId120">Societe Id 120</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="groupeId121">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId121">Groupe Id 121</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numBloc122">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc122">Num Bloc 122</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeResv123">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv123">Type Resv 123</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutResv124">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv124">Statut Resv 124</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDebutResv125">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv125">Date Debut Resv 125</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateFinResv126">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv126">Date Fin Resv 126</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateDebutResv127">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv127"
+                  >Trunc Date Debut Resv 127</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateFinResv128">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv128"
+                  >Trunc Date Fin Resv 128</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateAnnResv129">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv129">Date Ann Resv 129</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pseudoRoomYn130">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn130">Pseudo Room Yn 130</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createurResv131">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv131">Createur Resv 131</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomCreateurResv132">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv132"
+                  >Nom Createur Resv 132</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGarantie133">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie133">Code Garantie 133</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="flgDed134">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed134">Flg Ded 134</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePays135">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays135">Code Pays 135</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPays136">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays136">Lib Pays 136</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeNationalite137">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite137">Code Nationalite 137</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libNationalite138">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite138">Lib Nationalite 138</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeSource139">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource139">Code Source 139</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libSource140">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource140">Lib Source 140</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandSource141">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource141"
+                  >Code Grand Source 141</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeOrigine142">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine142">Code Origine 142</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libOrigine143">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine143">Lib Origine 143</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeMarche144">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche144">Code Marche 144</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libMarche145">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche145">Lib Marche 145</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandMarche146">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche146"
+                  >Code Grand Marche 146</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libGrandMarche147">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche147">Lib Grand Marche 147</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePrix148">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix148">Code Prix 148</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categPrix149">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix149">Categ Prix 149</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPrix150">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix150">Lib Prix 150</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numChb151">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb151">Num Chb 151</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChb152">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb152"
+                  >Description Type Chb 152</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChb153">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb153">Code Type Chb 153</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="classChb154">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb154">Class Chb 154</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="caractChb155">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb155">Caract Chb 155</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChbDeReservation156">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation156"
+                  >Type Chb De Reservation 156</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChbDeResv157">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv157"
+                  >Description Type Chb De Resv 157</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChbDeResv158">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv158"
+                  >Code Type Chb De Resv 158</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDeReservation159">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation159"
+                  >Statut De Reservation 159</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribution160">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution160"
+                  >Circuit Distribution 160</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribUserRegroup161">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup161"
+                  >Circuit Distrib User Regroup 161</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numCrs162">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs162">Num Crs 162</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeRefCrs163">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs163">Type Ref Crs 163</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="crsInsertDate164">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate164">Crs Insert Date 164</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateCreaResv165">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv165">Date Crea Resv 165</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datePremier166">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier166">Date Premier 166</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutPremier167">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier167">Statut Premier 167</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernier168">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier168">Date Dernier 168</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernier169">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier169">Statut Dernier 169</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernierPseudo170">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo170"
+                  >Date Dernier Pseudo 170</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernierPseudo171">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo171"
+                  >Statut Dernier Pseudo 171</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtCreaAnn172">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn172">Diff Dt Crea Ann 172</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtArrAnn173">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn173">Diff Dt Arr Ann 173</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="leadtime174">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime174">Leadtime 174</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="los175">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los175">Los 175</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="occupantsGroupe176">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe176">Occupants Groupe 176</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuitee177">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee177">Nb Nuitee 177</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuiteeNnDed178">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed178">Nb Nuitee Nn Ded 178</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbResvAnn179">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn179">Nb Resv Ann 179</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbAdu180">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu180">Nb Adu 180</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbEnf181">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf181">Nb Enf 181</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDayU182">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU182">Nb Pers Day U 182</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersArr183">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr183">Nb Pers Arr 183</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDep184">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep184">Nb Pers Dep 184</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersAnn185">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn185">Nb Pers Ann 185</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersNoshow186">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow186">Nb Pers Noshow 186</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDayU187">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU187">Nb Chb Day U 187</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbArr188">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr188">Nb Chb Arr 188</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDep189">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep189">Nb Chb Dep 189</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbAnn190">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn190">Nb Chb Ann 190</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbNoshow191">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow191">Nb Chb Noshow 191</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambre192">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre192"
+                  >Revenu Net Chambre 192</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambre193">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre193"
+                  >Revenu Taxe Chambre 193</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambreGlobal194">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal194"
+                  >Revenu Net Chambre Global 194</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambreGlobal195">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal195"
+                  >Revenu Taxe Chambre Global 195</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBq196">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq196">Revenu Net Bq 196</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBq197">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq197">Revenu Taxe Bq 197</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBqGlobal198">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal198"
+                  >Revenu Net Bq Global 198</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBqGlobal199">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal199"
+                  >Revenu Taxe Bq Global 199</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtra200">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra200">Revenu Net Extra 200</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtra201">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra201"
+                  >Revenu Taxe Extra 201</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtraGlobal202">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal202"
+                  >Revenu Net Extra Global 202</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtraGlobal203">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal203"
+                  >Revenu Taxe Extra Global 203</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetTotal204">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotal204">Revenu Net Total 204</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeTotal205">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotal205"
+                  >Revenu Taxe Total 205</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetTotalGlobal206">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotalGlobal206"
+                  >Revenu Net Total Global 206</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeTotalGlobal207">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotalGlobal207"
+                  >Revenu Taxe Total Global 207</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuChambre208">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuChambre208"
+                  >Prod Revenu Chambre 208</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuBq209">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuBq209">Prod Revenu Bq 209</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuExtra210">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuExtra210"
+                  >Prod Revenu Extra 210</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodRevenuTotal211">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuTotal211"
+                  >Prod Revenu Total 211</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="prodChambreNbNuitees212">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodChambreNbNuitees212"
+                  >Prod Chambre Nb Nuitees 212</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="techCreateDate213">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techCreateDate213">Tech Create Date 213</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="techUpdateDate214">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techUpdateDate214">Tech Update Date 214</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numLigne215">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne215">Num Ligne 215</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resort216">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort216">Resort 216</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="resvNameId217">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId217">Resv Name Id 217</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientOId218">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId218">Client O Id 218</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChb219">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb219">Type Chb 219</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="confirmationNo220">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo220">Confirmation No 220</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="clientMdmId221">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId221">Client Mdm Id 221</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nameId222">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId222">Name Id 222</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="parentResvNameId223">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId223"
+                  >Parent Resv Name Id 223</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contactId224">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId224">Contact Id 224</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceId225">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId225">Agence Id 225</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="agenceNom226">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom226">Agence Nom 226</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="societeId227">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId227">Societe Id 227</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="groupeId228">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId228">Groupe Id 228</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numBloc229">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc229">Num Bloc 229</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeResv230">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv230">Type Resv 230</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutResv231">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv231">Statut Resv 231</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDebutResv232">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv232">Date Debut Resv 232</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateFinResv233">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv233">Date Fin Resv 233</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateDebutResv234">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv234"
+                  >Trunc Date Debut Resv 234</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="truncDateFinResv235">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv235"
+                  >Trunc Date Fin Resv 235</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateAnnResv236">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv236">Date Ann Resv 236</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pseudoRoomYn237">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn237">Pseudo Room Yn 237</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createurResv238">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv238">Createur Resv 238</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nomCreateurResv239">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv239"
+                  >Nom Createur Resv 239</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGarantie240">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie240">Code Garantie 240</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="flgDed241">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed241">Flg Ded 241</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePays242">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays242">Code Pays 242</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPays243">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays243">Lib Pays 243</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeNationalite244">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite244">Code Nationalite 244</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libNationalite245">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite245">Lib Nationalite 245</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeSource246">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource246">Code Source 246</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libSource247">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource247">Lib Source 247</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandSource248">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource248"
+                  >Code Grand Source 248</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeOrigine249">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine249">Code Origine 249</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libOrigine250">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine250">Lib Origine 250</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeMarche251">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche251">Code Marche 251</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libMarche252">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche252">Lib Marche 252</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeGrandMarche253">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche253"
+                  >Code Grand Marche 253</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libGrandMarche254">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche254">Lib Grand Marche 254</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codePrix255">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix255">Code Prix 255</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categPrix256">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix256">Categ Prix 256</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="libPrix257">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix257">Lib Prix 257</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numChb258">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb258">Num Chb 258</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChb259">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb259"
+                  >Description Type Chb 259</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChb260">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb260">Code Type Chb 260</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="classChb261">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb261">Class Chb 261</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="caractChb262">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb262">Caract Chb 262</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeChbDeReservation263">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation263"
+                  >Type Chb De Reservation 263</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descriptionTypeChbDeResv264">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv264"
+                  >Description Type Chb De Resv 264</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="codeTypeChbDeResv265">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv265"
+                  >Code Type Chb De Resv 265</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDeReservation266">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation266"
+                  >Statut De Reservation 266</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribution267">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution267"
+                  >Circuit Distribution 267</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="circuitDistribUserRegroup268">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup268"
+                  >Circuit Distrib User Regroup 268</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numCrs269">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs269">Num Crs 269</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeRefCrs270">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs270">Type Ref Crs 270</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="crsInsertDate271">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate271">Crs Insert Date 271</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateCreaResv272">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv272">Date Crea Resv 272</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="datePremier273">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier273">Date Premier 273</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutPremier274">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier274">Statut Premier 274</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernier275">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier275">Date Dernier 275</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernier276">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier276">Statut Dernier 276</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateDernierPseudo277">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo277"
+                  >Date Dernier Pseudo 277</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="statutDernierPseudo278">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo278"
+                  >Statut Dernier Pseudo 278</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtCreaAnn279">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn279">Diff Dt Crea Ann 279</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diffDtArrAnn280">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn280">Diff Dt Arr Ann 280</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="leadtime281">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime281">Leadtime 281</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="los282">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los282">Los 282</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="occupantsGroupe283">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe283">Occupants Groupe 283</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuitee284">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee284">Nb Nuitee 284</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbNuiteeNnDed285">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed285">Nb Nuitee Nn Ded 285</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbResvAnn286">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn286">Nb Resv Ann 286</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbAdu287">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu287">Nb Adu 287</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbEnf288">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf288">Nb Enf 288</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDayU289">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU289">Nb Pers Day U 289</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersArr290">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr290">Nb Pers Arr 290</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersDep291">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep291">Nb Pers Dep 291</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersAnn292">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn292">Nb Pers Ann 292</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbPersNoshow293">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow293">Nb Pers Noshow 293</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDayU294">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU294">Nb Chb Day U 294</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbArr295">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr295">Nb Chb Arr 295</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbDep296">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep296">Nb Chb Dep 296</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbAnn297">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn297">Nb Chb Ann 297</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbChbNoshow298">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow298">Nb Chb Noshow 298</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambre299">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre299"
+                  >Revenu Net Chambre 299</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambre300">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre300"
+                  >Revenu Taxe Chambre 300</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetChambreGlobal301">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal301"
+                  >Revenu Net Chambre Global 301</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeChambreGlobal302">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal302"
+                  >Revenu Taxe Chambre Global 302</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBq303">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq303">Revenu Net Bq 303</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBq304">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq304">Revenu Taxe Bq 304</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetBqGlobal305">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal305"
+                  >Revenu Net Bq Global 305</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeBqGlobal306">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal306"
+                  >Revenu Taxe Bq Global 306</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtra307">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra307">Revenu Net Extra 307</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtra308">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra308"
+                  >Revenu Taxe Extra 308</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuNetExtraGlobal309">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal309"
+                  >Revenu Net Extra Global 309</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="revenuTaxeExtraGlobal310">
+              <div class="d-flex">
+                <span jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal310"
+                  >Revenu Taxe Extra Global 310</span
+                >
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (table1 of table1s; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/accesssampleapplication/table-1', table1.id, 'view']">{{ table1.id }}</a>
+              </td>
+              <td>{{ table1.numLigne1 }}</td>
+              <td>{{ table1.resort2 }}</td>
+              <td>{{ table1.resvNameId3 }}</td>
+              <td>{{ table1.clientOId4 }}</td>
+              <td>{{ table1.typeChb5 }}</td>
+              <td>{{ table1.confirmationNo6 }}</td>
+              <td>{{ table1.clientMdmId7 }}</td>
+              <td>{{ table1.nameId8 }}</td>
+              <td>{{ table1.parentResvNameId9 }}</td>
+              <td>{{ table1.contactId10 }}</td>
+              <td>{{ table1.agenceId11 }}</td>
+              <td>{{ table1.agenceNom12 }}</td>
+              <td>{{ table1.societeId13 }}</td>
+              <td>{{ table1.groupeId14 }}</td>
+              <td>{{ table1.numBloc15 }}</td>
+              <td>{{ table1.typeResv16 }}</td>
+              <td>{{ table1.statutResv17 }}</td>
+              <td>{{ table1.dateDebutResv18 | formatMediumDate }}</td>
+              <td>{{ table1.dateFinResv19 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateDebutResv20 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateFinResv21 | formatMediumDate }}</td>
+              <td>{{ table1.dateAnnResv22 | formatMediumDate }}</td>
+              <td>{{ table1.pseudoRoomYn23 }}</td>
+              <td>{{ table1.createurResv24 }}</td>
+              <td>{{ table1.nomCreateurResv25 }}</td>
+              <td>{{ table1.codeGarantie26 }}</td>
+              <td>{{ table1.flgDed27 }}</td>
+              <td>{{ table1.codePays28 }}</td>
+              <td>{{ table1.libPays29 }}</td>
+              <td>{{ table1.codeNationalite30 }}</td>
+              <td>{{ table1.libNationalite31 }}</td>
+              <td>{{ table1.codeSource32 }}</td>
+              <td>{{ table1.libSource33 }}</td>
+              <td>{{ table1.codeGrandSource34 }}</td>
+              <td>{{ table1.codeOrigine35 }}</td>
+              <td>{{ table1.libOrigine36 }}</td>
+              <td>{{ table1.codeMarche37 }}</td>
+              <td>{{ table1.libMarche38 }}</td>
+              <td>{{ table1.codeGrandMarche39 }}</td>
+              <td>{{ table1.libGrandMarche40 }}</td>
+              <td>{{ table1.codePrix41 }}</td>
+              <td>{{ table1.categPrix42 }}</td>
+              <td>{{ table1.libPrix43 }}</td>
+              <td>{{ table1.numChb44 }}</td>
+              <td>{{ table1.descriptionTypeChb45 }}</td>
+              <td>{{ table1.codeTypeChb46 }}</td>
+              <td>{{ table1.classChb47 }}</td>
+              <td>{{ table1.caractChb48 }}</td>
+              <td>{{ table1.typeChbDeReservation49 }}</td>
+              <td>{{ table1.descriptionTypeChbDeResv50 }}</td>
+              <td>{{ table1.codeTypeChbDeResv51 }}</td>
+              <td>{{ table1.statutDeReservation52 }}</td>
+              <td>{{ table1.circuitDistribution53 }}</td>
+              <td>{{ table1.circuitDistribUserRegroup54 }}</td>
+              <td>{{ table1.numCrs55 }}</td>
+              <td>{{ table1.typeRefCrs56 }}</td>
+              <td>{{ table1.crsInsertDate57 | formatMediumDate }}</td>
+              <td>{{ table1.dateCreaResv58 | formatMediumDate }}</td>
+              <td>{{ table1.datePremier59 | formatMediumDate }}</td>
+              <td>{{ table1.statutPremier60 }}</td>
+              <td>{{ table1.dateDernier61 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernier62 }}</td>
+              <td>{{ table1.dateDernierPseudo63 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernierPseudo64 }}</td>
+              <td>{{ table1.diffDtCreaAnn65 }}</td>
+              <td>{{ table1.diffDtArrAnn66 }}</td>
+              <td>{{ table1.leadtime67 }}</td>
+              <td>{{ table1.los68 }}</td>
+              <td>{{ table1.occupantsGroupe69 }}</td>
+              <td>{{ table1.nbNuitee70 }}</td>
+              <td>{{ table1.nbNuiteeNnDed71 }}</td>
+              <td>{{ table1.nbResvAnn72 }}</td>
+              <td>{{ table1.nbAdu73 }}</td>
+              <td>{{ table1.nbEnf74 }}</td>
+              <td>{{ table1.nbPersDayU75 }}</td>
+              <td>{{ table1.nbPersArr76 }}</td>
+              <td>{{ table1.nbPersDep77 }}</td>
+              <td>{{ table1.nbPersAnn78 }}</td>
+              <td>{{ table1.nbPersNoshow79 }}</td>
+              <td>{{ table1.nbChbDayU80 }}</td>
+              <td>{{ table1.nbChbArr81 }}</td>
+              <td>{{ table1.nbChbDep82 }}</td>
+              <td>{{ table1.nbChbAnn83 }}</td>
+              <td>{{ table1.nbChbNoshow84 }}</td>
+              <td>{{ table1.revenuNetChambre85 }}</td>
+              <td>{{ table1.revenuTaxeChambre86 }}</td>
+              <td>{{ table1.revenuNetChambreGlobal87 }}</td>
+              <td>{{ table1.revenuTaxeChambreGlobal88 }}</td>
+              <td>{{ table1.revenuNetBq89 }}</td>
+              <td>{{ table1.revenuTaxeBq90 }}</td>
+              <td>{{ table1.revenuNetBqGlobal91 }}</td>
+              <td>{{ table1.revenuTaxeBqGlobal92 }}</td>
+              <td>{{ table1.revenuNetExtra93 }}</td>
+              <td>{{ table1.revenuTaxeExtra94 }}</td>
+              <td>{{ table1.revenuNetExtraGlobal95 }}</td>
+              <td>{{ table1.revenuTaxeExtraGlobal96 }}</td>
+              <td>{{ table1.revenuNetTotal97 }}</td>
+              <td>{{ table1.revenuTaxeTotal98 }}</td>
+              <td>{{ table1.revenuNetTotalGlobal99 }}</td>
+              <td>{{ table1.revenuTaxeTotalGlobal100 }}</td>
+              <td>{{ table1.prodRevenuChambre101 }}</td>
+              <td>{{ table1.prodRevenuBq102 }}</td>
+              <td>{{ table1.prodRevenuExtra103 }}</td>
+              <td>{{ table1.prodRevenuTotal104 }}</td>
+              <td>{{ table1.prodChambreNbNuitees105 }}</td>
+              <td>{{ table1.techCreateDate106 | formatMediumDate }}</td>
+              <td>{{ table1.techUpdateDate107 | formatMediumDate }}</td>
+              <td>{{ table1.numLigne108 }}</td>
+              <td>{{ table1.resort109 }}</td>
+              <td>{{ table1.resvNameId110 }}</td>
+              <td>{{ table1.clientOId111 }}</td>
+              <td>{{ table1.typeChb112 }}</td>
+              <td>{{ table1.confirmationNo113 }}</td>
+              <td>{{ table1.clientMdmId114 }}</td>
+              <td>{{ table1.nameId115 }}</td>
+              <td>{{ table1.parentResvNameId116 }}</td>
+              <td>{{ table1.contactId117 }}</td>
+              <td>{{ table1.agenceId118 }}</td>
+              <td>{{ table1.agenceNom119 }}</td>
+              <td>{{ table1.societeId120 }}</td>
+              <td>{{ table1.groupeId121 }}</td>
+              <td>{{ table1.numBloc122 }}</td>
+              <td>{{ table1.typeResv123 }}</td>
+              <td>{{ table1.statutResv124 }}</td>
+              <td>{{ table1.dateDebutResv125 | formatMediumDate }}</td>
+              <td>{{ table1.dateFinResv126 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateDebutResv127 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateFinResv128 | formatMediumDate }}</td>
+              <td>{{ table1.dateAnnResv129 | formatMediumDate }}</td>
+              <td>{{ table1.pseudoRoomYn130 }}</td>
+              <td>{{ table1.createurResv131 }}</td>
+              <td>{{ table1.nomCreateurResv132 }}</td>
+              <td>{{ table1.codeGarantie133 }}</td>
+              <td>{{ table1.flgDed134 }}</td>
+              <td>{{ table1.codePays135 }}</td>
+              <td>{{ table1.libPays136 }}</td>
+              <td>{{ table1.codeNationalite137 }}</td>
+              <td>{{ table1.libNationalite138 }}</td>
+              <td>{{ table1.codeSource139 }}</td>
+              <td>{{ table1.libSource140 }}</td>
+              <td>{{ table1.codeGrandSource141 }}</td>
+              <td>{{ table1.codeOrigine142 }}</td>
+              <td>{{ table1.libOrigine143 }}</td>
+              <td>{{ table1.codeMarche144 }}</td>
+              <td>{{ table1.libMarche145 }}</td>
+              <td>{{ table1.codeGrandMarche146 }}</td>
+              <td>{{ table1.libGrandMarche147 }}</td>
+              <td>{{ table1.codePrix148 }}</td>
+              <td>{{ table1.categPrix149 }}</td>
+              <td>{{ table1.libPrix150 }}</td>
+              <td>{{ table1.numChb151 }}</td>
+              <td>{{ table1.descriptionTypeChb152 }}</td>
+              <td>{{ table1.codeTypeChb153 }}</td>
+              <td>{{ table1.classChb154 }}</td>
+              <td>{{ table1.caractChb155 }}</td>
+              <td>{{ table1.typeChbDeReservation156 }}</td>
+              <td>{{ table1.descriptionTypeChbDeResv157 }}</td>
+              <td>{{ table1.codeTypeChbDeResv158 }}</td>
+              <td>{{ table1.statutDeReservation159 }}</td>
+              <td>{{ table1.circuitDistribution160 }}</td>
+              <td>{{ table1.circuitDistribUserRegroup161 }}</td>
+              <td>{{ table1.numCrs162 }}</td>
+              <td>{{ table1.typeRefCrs163 }}</td>
+              <td>{{ table1.crsInsertDate164 | formatMediumDate }}</td>
+              <td>{{ table1.dateCreaResv165 | formatMediumDate }}</td>
+              <td>{{ table1.datePremier166 | formatMediumDate }}</td>
+              <td>{{ table1.statutPremier167 }}</td>
+              <td>{{ table1.dateDernier168 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernier169 }}</td>
+              <td>{{ table1.dateDernierPseudo170 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernierPseudo171 }}</td>
+              <td>{{ table1.diffDtCreaAnn172 }}</td>
+              <td>{{ table1.diffDtArrAnn173 }}</td>
+              <td>{{ table1.leadtime174 }}</td>
+              <td>{{ table1.los175 }}</td>
+              <td>{{ table1.occupantsGroupe176 }}</td>
+              <td>{{ table1.nbNuitee177 }}</td>
+              <td>{{ table1.nbNuiteeNnDed178 }}</td>
+              <td>{{ table1.nbResvAnn179 }}</td>
+              <td>{{ table1.nbAdu180 }}</td>
+              <td>{{ table1.nbEnf181 }}</td>
+              <td>{{ table1.nbPersDayU182 }}</td>
+              <td>{{ table1.nbPersArr183 }}</td>
+              <td>{{ table1.nbPersDep184 }}</td>
+              <td>{{ table1.nbPersAnn185 }}</td>
+              <td>{{ table1.nbPersNoshow186 }}</td>
+              <td>{{ table1.nbChbDayU187 }}</td>
+              <td>{{ table1.nbChbArr188 }}</td>
+              <td>{{ table1.nbChbDep189 }}</td>
+              <td>{{ table1.nbChbAnn190 }}</td>
+              <td>{{ table1.nbChbNoshow191 }}</td>
+              <td>{{ table1.revenuNetChambre192 }}</td>
+              <td>{{ table1.revenuTaxeChambre193 }}</td>
+              <td>{{ table1.revenuNetChambreGlobal194 }}</td>
+              <td>{{ table1.revenuTaxeChambreGlobal195 }}</td>
+              <td>{{ table1.revenuNetBq196 }}</td>
+              <td>{{ table1.revenuTaxeBq197 }}</td>
+              <td>{{ table1.revenuNetBqGlobal198 }}</td>
+              <td>{{ table1.revenuTaxeBqGlobal199 }}</td>
+              <td>{{ table1.revenuNetExtra200 }}</td>
+              <td>{{ table1.revenuTaxeExtra201 }}</td>
+              <td>{{ table1.revenuNetExtraGlobal202 }}</td>
+              <td>{{ table1.revenuTaxeExtraGlobal203 }}</td>
+              <td>{{ table1.revenuNetTotal204 }}</td>
+              <td>{{ table1.revenuTaxeTotal205 }}</td>
+              <td>{{ table1.revenuNetTotalGlobal206 }}</td>
+              <td>{{ table1.revenuTaxeTotalGlobal207 }}</td>
+              <td>{{ table1.prodRevenuChambre208 }}</td>
+              <td>{{ table1.prodRevenuBq209 }}</td>
+              <td>{{ table1.prodRevenuExtra210 }}</td>
+              <td>{{ table1.prodRevenuTotal211 }}</td>
+              <td>{{ table1.prodChambreNbNuitees212 }}</td>
+              <td>{{ table1.techCreateDate213 | formatMediumDate }}</td>
+              <td>{{ table1.techUpdateDate214 | formatMediumDate }}</td>
+              <td>{{ table1.numLigne215 }}</td>
+              <td>{{ table1.resort216 }}</td>
+              <td>{{ table1.resvNameId217 }}</td>
+              <td>{{ table1.clientOId218 }}</td>
+              <td>{{ table1.typeChb219 }}</td>
+              <td>{{ table1.confirmationNo220 }}</td>
+              <td>{{ table1.clientMdmId221 }}</td>
+              <td>{{ table1.nameId222 }}</td>
+              <td>{{ table1.parentResvNameId223 }}</td>
+              <td>{{ table1.contactId224 }}</td>
+              <td>{{ table1.agenceId225 }}</td>
+              <td>{{ table1.agenceNom226 }}</td>
+              <td>{{ table1.societeId227 }}</td>
+              <td>{{ table1.groupeId228 }}</td>
+              <td>{{ table1.numBloc229 }}</td>
+              <td>{{ table1.typeResv230 }}</td>
+              <td>{{ table1.statutResv231 }}</td>
+              <td>{{ table1.dateDebutResv232 | formatMediumDate }}</td>
+              <td>{{ table1.dateFinResv233 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateDebutResv234 | formatMediumDate }}</td>
+              <td>{{ table1.truncDateFinResv235 | formatMediumDate }}</td>
+              <td>{{ table1.dateAnnResv236 | formatMediumDate }}</td>
+              <td>{{ table1.pseudoRoomYn237 }}</td>
+              <td>{{ table1.createurResv238 }}</td>
+              <td>{{ table1.nomCreateurResv239 }}</td>
+              <td>{{ table1.codeGarantie240 }}</td>
+              <td>{{ table1.flgDed241 }}</td>
+              <td>{{ table1.codePays242 }}</td>
+              <td>{{ table1.libPays243 }}</td>
+              <td>{{ table1.codeNationalite244 }}</td>
+              <td>{{ table1.libNationalite245 }}</td>
+              <td>{{ table1.codeSource246 }}</td>
+              <td>{{ table1.libSource247 }}</td>
+              <td>{{ table1.codeGrandSource248 }}</td>
+              <td>{{ table1.codeOrigine249 }}</td>
+              <td>{{ table1.libOrigine250 }}</td>
+              <td>{{ table1.codeMarche251 }}</td>
+              <td>{{ table1.libMarche252 }}</td>
+              <td>{{ table1.codeGrandMarche253 }}</td>
+              <td>{{ table1.libGrandMarche254 }}</td>
+              <td>{{ table1.codePrix255 }}</td>
+              <td>{{ table1.categPrix256 }}</td>
+              <td>{{ table1.libPrix257 }}</td>
+              <td>{{ table1.numChb258 }}</td>
+              <td>{{ table1.descriptionTypeChb259 }}</td>
+              <td>{{ table1.codeTypeChb260 }}</td>
+              <td>{{ table1.classChb261 }}</td>
+              <td>{{ table1.caractChb262 }}</td>
+              <td>{{ table1.typeChbDeReservation263 }}</td>
+              <td>{{ table1.descriptionTypeChbDeResv264 }}</td>
+              <td>{{ table1.codeTypeChbDeResv265 }}</td>
+              <td>{{ table1.statutDeReservation266 }}</td>
+              <td>{{ table1.circuitDistribution267 }}</td>
+              <td>{{ table1.circuitDistribUserRegroup268 }}</td>
+              <td>{{ table1.numCrs269 }}</td>
+              <td>{{ table1.typeRefCrs270 }}</td>
+              <td>{{ table1.crsInsertDate271 | formatMediumDate }}</td>
+              <td>{{ table1.dateCreaResv272 | formatMediumDate }}</td>
+              <td>{{ table1.datePremier273 | formatMediumDate }}</td>
+              <td>{{ table1.statutPremier274 }}</td>
+              <td>{{ table1.dateDernier275 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernier276 }}</td>
+              <td>{{ table1.dateDernierPseudo277 | formatMediumDate }}</td>
+              <td>{{ table1.statutDernierPseudo278 }}</td>
+              <td>{{ table1.diffDtCreaAnn279 }}</td>
+              <td>{{ table1.diffDtArrAnn280 }}</td>
+              <td>{{ table1.leadtime281 }}</td>
+              <td>{{ table1.los282 }}</td>
+              <td>{{ table1.occupantsGroupe283 }}</td>
+              <td>{{ table1.nbNuitee284 }}</td>
+              <td>{{ table1.nbNuiteeNnDed285 }}</td>
+              <td>{{ table1.nbResvAnn286 }}</td>
+              <td>{{ table1.nbAdu287 }}</td>
+              <td>{{ table1.nbEnf288 }}</td>
+              <td>{{ table1.nbPersDayU289 }}</td>
+              <td>{{ table1.nbPersArr290 }}</td>
+              <td>{{ table1.nbPersDep291 }}</td>
+              <td>{{ table1.nbPersAnn292 }}</td>
+              <td>{{ table1.nbPersNoshow293 }}</td>
+              <td>{{ table1.nbChbDayU294 }}</td>
+              <td>{{ table1.nbChbArr295 }}</td>
+              <td>{{ table1.nbChbDep296 }}</td>
+              <td>{{ table1.nbChbAnn297 }}</td>
+              <td>{{ table1.nbChbNoshow298 }}</td>
+              <td>{{ table1.revenuNetChambre299 }}</td>
+              <td>{{ table1.revenuTaxeChambre300 }}</td>
+              <td>{{ table1.revenuNetChambreGlobal301 }}</td>
+              <td>{{ table1.revenuTaxeChambreGlobal302 }}</td>
+              <td>{{ table1.revenuNetBq303 }}</td>
+              <td>{{ table1.revenuTaxeBq304 }}</td>
+              <td>{{ table1.revenuNetBqGlobal305 }}</td>
+              <td>{{ table1.revenuTaxeBqGlobal306 }}</td>
+              <td>{{ table1.revenuNetExtra307 }}</td>
+              <td>{{ table1.revenuTaxeExtra308 }}</td>
+              <td>{{ table1.revenuNetExtraGlobal309 }}</td>
+              <td>{{ table1.revenuTaxeExtraGlobal310 }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/accesssampleapplication/table-1', table1.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/accesssampleapplication/table-1', table1.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(table1)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>
