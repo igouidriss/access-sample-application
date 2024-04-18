@@ -7,7 +7,12 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "accessSampleApplicationTable5": "Table 5",
+        "accessSampleApplicationTable4": "Table 4",
+        "accessSampleApplicationTable3": "Table 3",
+        "accessSampleApplicationTable2": "Table 2",
+        "accessSampleApplicationTable1": "Table 1"
       },
       "account": {
         "main": "Account",

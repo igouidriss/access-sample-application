@@ -1,0 +1,5258 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-table-1-heading"
+        data-cy="Table1CreateUpdateHeading"
+        jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.home.createOrEditLabel"
+      >
+        Create or edit a Table 1
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numLigne1" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne1"
+            >Num Ligne 1</label
+          >
+          <input type="number" class="form-control" name="numLigne1" id="field_numLigne1" data-cy="numLigne1" formControlName="numLigne1" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_resort2" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort2"
+            >Resort 2</label
+          >
+          <input type="text" class="form-control" name="resort2" id="field_resort2" data-cy="resort2" formControlName="resort2" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_resvNameId3"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId3"
+            >Resv Name Id 3</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="resvNameId3"
+            id="field_resvNameId3"
+            data-cy="resvNameId3"
+            formControlName="resvNameId3"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientOId4"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId4"
+            >Client O Id 4</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientOId4"
+            id="field_clientOId4"
+            data-cy="clientOId4"
+            formControlName="clientOId4"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_typeChb5" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb5"
+            >Type Chb 5</label
+          >
+          <input type="text" class="form-control" name="typeChb5" id="field_typeChb5" data-cy="typeChb5" formControlName="typeChb5" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_confirmationNo6"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo6"
+            >Confirmation No 6</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="confirmationNo6"
+            id="field_confirmationNo6"
+            data-cy="confirmationNo6"
+            formControlName="confirmationNo6"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientMdmId7"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId7"
+            >Client Mdm Id 7</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientMdmId7"
+            id="field_clientMdmId7"
+            data-cy="clientMdmId7"
+            formControlName="clientMdmId7"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nameId8" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId8"
+            >Name Id 8</label
+          >
+          <input type="number" class="form-control" name="nameId8" id="field_nameId8" data-cy="nameId8" formControlName="nameId8" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_parentResvNameId9"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId9"
+            >Parent Resv Name Id 9</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="parentResvNameId9"
+            id="field_parentResvNameId9"
+            data-cy="parentResvNameId9"
+            formControlName="parentResvNameId9"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_contactId10"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId10"
+            >Contact Id 10</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="contactId10"
+            id="field_contactId10"
+            data-cy="contactId10"
+            formControlName="contactId10"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceId11"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId11"
+            >Agence Id 11</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="agenceId11"
+            id="field_agenceId11"
+            data-cy="agenceId11"
+            formControlName="agenceId11"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceNom12"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom12"
+            >Agence Nom 12</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="agenceNom12"
+            id="field_agenceNom12"
+            data-cy="agenceNom12"
+            formControlName="agenceNom12"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_societeId13"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId13"
+            >Societe Id 13</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="societeId13"
+            id="field_societeId13"
+            data-cy="societeId13"
+            formControlName="societeId13"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_groupeId14"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId14"
+            >Groupe Id 14</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="groupeId14"
+            id="field_groupeId14"
+            data-cy="groupeId14"
+            formControlName="groupeId14"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numBloc15" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc15"
+            >Num Bloc 15</label
+          >
+          <input type="number" class="form-control" name="numBloc15" id="field_numBloc15" data-cy="numBloc15" formControlName="numBloc15" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeResv16"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv16"
+            >Type Resv 16</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeResv16"
+            id="field_typeResv16"
+            data-cy="typeResv16"
+            formControlName="typeResv16"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutResv17"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv17"
+            >Statut Resv 17</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutResv17"
+            id="field_statutResv17"
+            data-cy="statutResv17"
+            formControlName="statutResv17"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDebutResv18"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv18"
+            >Date Debut Resv 18</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDebutResv18"
+              data-cy="dateDebutResv18"
+              type="text"
+              class="form-control"
+              name="dateDebutResv18"
+              ngbDatepicker
+              #dateDebutResv18Dp="ngbDatepicker"
+              formControlName="dateDebutResv18"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDebutResv18Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateFinResv19"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv19"
+            >Date Fin Resv 19</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateFinResv19"
+              data-cy="dateFinResv19"
+              type="text"
+              class="form-control"
+              name="dateFinResv19"
+              ngbDatepicker
+              #dateFinResv19Dp="ngbDatepicker"
+              formControlName="dateFinResv19"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateFinResv19Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateDebutResv20"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv20"
+            >Trunc Date Debut Resv 20</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateDebutResv20"
+              data-cy="truncDateDebutResv20"
+              type="text"
+              class="form-control"
+              name="truncDateDebutResv20"
+              ngbDatepicker
+              #truncDateDebutResv20Dp="ngbDatepicker"
+              formControlName="truncDateDebutResv20"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateDebutResv20Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateFinResv21"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv21"
+            >Trunc Date Fin Resv 21</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateFinResv21"
+              data-cy="truncDateFinResv21"
+              type="text"
+              class="form-control"
+              name="truncDateFinResv21"
+              ngbDatepicker
+              #truncDateFinResv21Dp="ngbDatepicker"
+              formControlName="truncDateFinResv21"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateFinResv21Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateAnnResv22"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv22"
+            >Date Ann Resv 22</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateAnnResv22"
+              data-cy="dateAnnResv22"
+              type="text"
+              class="form-control"
+              name="dateAnnResv22"
+              ngbDatepicker
+              #dateAnnResv22Dp="ngbDatepicker"
+              formControlName="dateAnnResv22"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateAnnResv22Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_pseudoRoomYn23"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn23"
+            >Pseudo Room Yn 23</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="pseudoRoomYn23"
+            id="field_pseudoRoomYn23"
+            data-cy="pseudoRoomYn23"
+            formControlName="pseudoRoomYn23"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_createurResv24"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv24"
+            >Createur Resv 24</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="createurResv24"
+            id="field_createurResv24"
+            data-cy="createurResv24"
+            formControlName="createurResv24"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomCreateurResv25"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv25"
+            >Nom Createur Resv 25</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomCreateurResv25"
+            id="field_nomCreateurResv25"
+            data-cy="nomCreateurResv25"
+            formControlName="nomCreateurResv25"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGarantie26"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie26"
+            >Code Garantie 26</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGarantie26"
+            id="field_codeGarantie26"
+            data-cy="codeGarantie26"
+            formControlName="codeGarantie26"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_flgDed27" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed27"
+            >Flg Ded 27</label
+          >
+          <input type="text" class="form-control" name="flgDed27" id="field_flgDed27" data-cy="flgDed27" formControlName="flgDed27" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePays28"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays28"
+            >Code Pays 28</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePays28"
+            id="field_codePays28"
+            data-cy="codePays28"
+            formControlName="codePays28"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_libPays29" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays29"
+            >Lib Pays 29</label
+          >
+          <input type="text" class="form-control" name="libPays29" id="field_libPays29" data-cy="libPays29" formControlName="libPays29" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeNationalite30"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite30"
+            >Code Nationalite 30</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeNationalite30"
+            id="field_codeNationalite30"
+            data-cy="codeNationalite30"
+            formControlName="codeNationalite30"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libNationalite31"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite31"
+            >Lib Nationalite 31</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libNationalite31"
+            id="field_libNationalite31"
+            data-cy="libNationalite31"
+            formControlName="libNationalite31"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeSource32"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource32"
+            >Code Source 32</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeSource32"
+            id="field_codeSource32"
+            data-cy="codeSource32"
+            formControlName="codeSource32"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libSource33"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource33"
+            >Lib Source 33</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libSource33"
+            id="field_libSource33"
+            data-cy="libSource33"
+            formControlName="libSource33"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandSource34"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource34"
+            >Code Grand Source 34</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandSource34"
+            id="field_codeGrandSource34"
+            data-cy="codeGrandSource34"
+            formControlName="codeGrandSource34"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeOrigine35"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine35"
+            >Code Origine 35</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeOrigine35"
+            id="field_codeOrigine35"
+            data-cy="codeOrigine35"
+            formControlName="codeOrigine35"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libOrigine36"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine36"
+            >Lib Origine 36</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libOrigine36"
+            id="field_libOrigine36"
+            data-cy="libOrigine36"
+            formControlName="libOrigine36"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeMarche37"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche37"
+            >Code Marche 37</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeMarche37"
+            id="field_codeMarche37"
+            data-cy="codeMarche37"
+            formControlName="codeMarche37"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libMarche38"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche38"
+            >Lib Marche 38</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libMarche38"
+            id="field_libMarche38"
+            data-cy="libMarche38"
+            formControlName="libMarche38"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandMarche39"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche39"
+            >Code Grand Marche 39</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandMarche39"
+            id="field_codeGrandMarche39"
+            data-cy="codeGrandMarche39"
+            formControlName="codeGrandMarche39"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libGrandMarche40"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche40"
+            >Lib Grand Marche 40</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libGrandMarche40"
+            id="field_libGrandMarche40"
+            data-cy="libGrandMarche40"
+            formControlName="libGrandMarche40"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePrix41"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix41"
+            >Code Prix 41</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePrix41"
+            id="field_codePrix41"
+            data-cy="codePrix41"
+            formControlName="codePrix41"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_categPrix42"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix42"
+            >Categ Prix 42</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="categPrix42"
+            id="field_categPrix42"
+            data-cy="categPrix42"
+            formControlName="categPrix42"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_libPrix43" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix43"
+            >Lib Prix 43</label
+          >
+          <input type="text" class="form-control" name="libPrix43" id="field_libPrix43" data-cy="libPrix43" formControlName="libPrix43" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numChb44" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb44"
+            >Num Chb 44</label
+          >
+          <input type="text" class="form-control" name="numChb44" id="field_numChb44" data-cy="numChb44" formControlName="numChb44" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChb45"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb45"
+            >Description Type Chb 45</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChb45"
+            id="field_descriptionTypeChb45"
+            data-cy="descriptionTypeChb45"
+            formControlName="descriptionTypeChb45"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChb46"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb46"
+            >Code Type Chb 46</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChb46"
+            id="field_codeTypeChb46"
+            data-cy="codeTypeChb46"
+            formControlName="codeTypeChb46"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_classChb47"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb47"
+            >Class Chb 47</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="classChb47"
+            id="field_classChb47"
+            data-cy="classChb47"
+            formControlName="classChb47"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_caractChb48"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb48"
+            >Caract Chb 48</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="caractChb48"
+            id="field_caractChb48"
+            data-cy="caractChb48"
+            formControlName="caractChb48"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeChbDeReservation49"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation49"
+            >Type Chb De Reservation 49</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeChbDeReservation49"
+            id="field_typeChbDeReservation49"
+            data-cy="typeChbDeReservation49"
+            formControlName="typeChbDeReservation49"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChbDeResv50"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv50"
+            >Description Type Chb De Resv 50</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChbDeResv50"
+            id="field_descriptionTypeChbDeResv50"
+            data-cy="descriptionTypeChbDeResv50"
+            formControlName="descriptionTypeChbDeResv50"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChbDeResv51"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv51"
+            >Code Type Chb De Resv 51</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChbDeResv51"
+            id="field_codeTypeChbDeResv51"
+            data-cy="codeTypeChbDeResv51"
+            formControlName="codeTypeChbDeResv51"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDeReservation52"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation52"
+            >Statut De Reservation 52</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDeReservation52"
+            id="field_statutDeReservation52"
+            data-cy="statutDeReservation52"
+            formControlName="statutDeReservation52"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribution53"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution53"
+            >Circuit Distribution 53</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribution53"
+            id="field_circuitDistribution53"
+            data-cy="circuitDistribution53"
+            formControlName="circuitDistribution53"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribUserRegroup54"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup54"
+            >Circuit Distrib User Regroup 54</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribUserRegroup54"
+            id="field_circuitDistribUserRegroup54"
+            data-cy="circuitDistribUserRegroup54"
+            formControlName="circuitDistribUserRegroup54"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numCrs55" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs55"
+            >Num Crs 55</label
+          >
+          <input type="text" class="form-control" name="numCrs55" id="field_numCrs55" data-cy="numCrs55" formControlName="numCrs55" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeRefCrs56"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs56"
+            >Type Ref Crs 56</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeRefCrs56"
+            id="field_typeRefCrs56"
+            data-cy="typeRefCrs56"
+            formControlName="typeRefCrs56"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_crsInsertDate57"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate57"
+            >Crs Insert Date 57</label
+          >
+          <div class="input-group">
+            <input
+              id="field_crsInsertDate57"
+              data-cy="crsInsertDate57"
+              type="text"
+              class="form-control"
+              name="crsInsertDate57"
+              ngbDatepicker
+              #crsInsertDate57Dp="ngbDatepicker"
+              formControlName="crsInsertDate57"
+            />
+            <button type="button" class="btn btn-secondary" (click)="crsInsertDate57Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateCreaResv58"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv58"
+            >Date Crea Resv 58</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateCreaResv58"
+              data-cy="dateCreaResv58"
+              type="text"
+              class="form-control"
+              name="dateCreaResv58"
+              ngbDatepicker
+              #dateCreaResv58Dp="ngbDatepicker"
+              formControlName="dateCreaResv58"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateCreaResv58Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datePremier59"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier59"
+            >Date Premier 59</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datePremier59"
+              data-cy="datePremier59"
+              type="text"
+              class="form-control"
+              name="datePremier59"
+              ngbDatepicker
+              #datePremier59Dp="ngbDatepicker"
+              formControlName="datePremier59"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datePremier59Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutPremier60"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier60"
+            >Statut Premier 60</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutPremier60"
+            id="field_statutPremier60"
+            data-cy="statutPremier60"
+            formControlName="statutPremier60"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernier61"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier61"
+            >Date Dernier 61</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernier61"
+              data-cy="dateDernier61"
+              type="text"
+              class="form-control"
+              name="dateDernier61"
+              ngbDatepicker
+              #dateDernier61Dp="ngbDatepicker"
+              formControlName="dateDernier61"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernier61Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernier62"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier62"
+            >Statut Dernier 62</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernier62"
+            id="field_statutDernier62"
+            data-cy="statutDernier62"
+            formControlName="statutDernier62"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernierPseudo63"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo63"
+            >Date Dernier Pseudo 63</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernierPseudo63"
+              data-cy="dateDernierPseudo63"
+              type="text"
+              class="form-control"
+              name="dateDernierPseudo63"
+              ngbDatepicker
+              #dateDernierPseudo63Dp="ngbDatepicker"
+              formControlName="dateDernierPseudo63"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernierPseudo63Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernierPseudo64"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo64"
+            >Statut Dernier Pseudo 64</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernierPseudo64"
+            id="field_statutDernierPseudo64"
+            data-cy="statutDernierPseudo64"
+            formControlName="statutDernierPseudo64"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtCreaAnn65"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn65"
+            >Diff Dt Crea Ann 65</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtCreaAnn65"
+            id="field_diffDtCreaAnn65"
+            data-cy="diffDtCreaAnn65"
+            formControlName="diffDtCreaAnn65"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtArrAnn66"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn66"
+            >Diff Dt Arr Ann 66</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtArrAnn66"
+            id="field_diffDtArrAnn66"
+            data-cy="diffDtArrAnn66"
+            formControlName="diffDtArrAnn66"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_leadtime67"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime67"
+            >Leadtime 67</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="leadtime67"
+            id="field_leadtime67"
+            data-cy="leadtime67"
+            formControlName="leadtime67"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_los68" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los68"
+            >Los 68</label
+          >
+          <input type="number" class="form-control" name="los68" id="field_los68" data-cy="los68" formControlName="los68" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_occupantsGroupe69"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe69"
+            >Occupants Groupe 69</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="occupantsGroupe69"
+            id="field_occupantsGroupe69"
+            data-cy="occupantsGroupe69"
+            formControlName="occupantsGroupe69"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuitee70"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee70"
+            >Nb Nuitee 70</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuitee70"
+            id="field_nbNuitee70"
+            data-cy="nbNuitee70"
+            formControlName="nbNuitee70"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuiteeNnDed71"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed71"
+            >Nb Nuitee Nn Ded 71</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuiteeNnDed71"
+            id="field_nbNuiteeNnDed71"
+            data-cy="nbNuiteeNnDed71"
+            formControlName="nbNuiteeNnDed71"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbResvAnn72"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn72"
+            >Nb Resv Ann 72</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbResvAnn72"
+            id="field_nbResvAnn72"
+            data-cy="nbResvAnn72"
+            formControlName="nbResvAnn72"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbAdu73" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu73"
+            >Nb Adu 73</label
+          >
+          <input type="number" class="form-control" name="nbAdu73" id="field_nbAdu73" data-cy="nbAdu73" formControlName="nbAdu73" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbEnf74" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf74"
+            >Nb Enf 74</label
+          >
+          <input type="number" class="form-control" name="nbEnf74" id="field_nbEnf74" data-cy="nbEnf74" formControlName="nbEnf74" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDayU75"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU75"
+            >Nb Pers Day U 75</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDayU75"
+            id="field_nbPersDayU75"
+            data-cy="nbPersDayU75"
+            formControlName="nbPersDayU75"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersArr76"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr76"
+            >Nb Pers Arr 76</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersArr76"
+            id="field_nbPersArr76"
+            data-cy="nbPersArr76"
+            formControlName="nbPersArr76"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDep77"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep77"
+            >Nb Pers Dep 77</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDep77"
+            id="field_nbPersDep77"
+            data-cy="nbPersDep77"
+            formControlName="nbPersDep77"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersAnn78"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn78"
+            >Nb Pers Ann 78</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersAnn78"
+            id="field_nbPersAnn78"
+            data-cy="nbPersAnn78"
+            formControlName="nbPersAnn78"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersNoshow79"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow79"
+            >Nb Pers Noshow 79</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersNoshow79"
+            id="field_nbPersNoshow79"
+            data-cy="nbPersNoshow79"
+            formControlName="nbPersNoshow79"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDayU80"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU80"
+            >Nb Chb Day U 80</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDayU80"
+            id="field_nbChbDayU80"
+            data-cy="nbChbDayU80"
+            formControlName="nbChbDayU80"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbArr81"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr81"
+            >Nb Chb Arr 81</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbArr81"
+            id="field_nbChbArr81"
+            data-cy="nbChbArr81"
+            formControlName="nbChbArr81"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDep82"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep82"
+            >Nb Chb Dep 82</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDep82"
+            id="field_nbChbDep82"
+            data-cy="nbChbDep82"
+            formControlName="nbChbDep82"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbAnn83"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn83"
+            >Nb Chb Ann 83</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbAnn83"
+            id="field_nbChbAnn83"
+            data-cy="nbChbAnn83"
+            formControlName="nbChbAnn83"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbNoshow84"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow84"
+            >Nb Chb Noshow 84</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbNoshow84"
+            id="field_nbChbNoshow84"
+            data-cy="nbChbNoshow84"
+            formControlName="nbChbNoshow84"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambre85"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre85"
+            >Revenu Net Chambre 85</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambre85"
+            id="field_revenuNetChambre85"
+            data-cy="revenuNetChambre85"
+            formControlName="revenuNetChambre85"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambre86"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre86"
+            >Revenu Taxe Chambre 86</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambre86"
+            id="field_revenuTaxeChambre86"
+            data-cy="revenuTaxeChambre86"
+            formControlName="revenuTaxeChambre86"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambreGlobal87"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal87"
+            >Revenu Net Chambre Global 87</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambreGlobal87"
+            id="field_revenuNetChambreGlobal87"
+            data-cy="revenuNetChambreGlobal87"
+            formControlName="revenuNetChambreGlobal87"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambreGlobal88"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal88"
+            >Revenu Taxe Chambre Global 88</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambreGlobal88"
+            id="field_revenuTaxeChambreGlobal88"
+            data-cy="revenuTaxeChambreGlobal88"
+            formControlName="revenuTaxeChambreGlobal88"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBq89"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq89"
+            >Revenu Net Bq 89</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBq89"
+            id="field_revenuNetBq89"
+            data-cy="revenuNetBq89"
+            formControlName="revenuNetBq89"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBq90"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq90"
+            >Revenu Taxe Bq 90</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBq90"
+            id="field_revenuTaxeBq90"
+            data-cy="revenuTaxeBq90"
+            formControlName="revenuTaxeBq90"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBqGlobal91"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal91"
+            >Revenu Net Bq Global 91</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBqGlobal91"
+            id="field_revenuNetBqGlobal91"
+            data-cy="revenuNetBqGlobal91"
+            formControlName="revenuNetBqGlobal91"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBqGlobal92"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal92"
+            >Revenu Taxe Bq Global 92</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBqGlobal92"
+            id="field_revenuTaxeBqGlobal92"
+            data-cy="revenuTaxeBqGlobal92"
+            formControlName="revenuTaxeBqGlobal92"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtra93"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra93"
+            >Revenu Net Extra 93</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtra93"
+            id="field_revenuNetExtra93"
+            data-cy="revenuNetExtra93"
+            formControlName="revenuNetExtra93"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtra94"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra94"
+            >Revenu Taxe Extra 94</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtra94"
+            id="field_revenuTaxeExtra94"
+            data-cy="revenuTaxeExtra94"
+            formControlName="revenuTaxeExtra94"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtraGlobal95"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal95"
+            >Revenu Net Extra Global 95</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtraGlobal95"
+            id="field_revenuNetExtraGlobal95"
+            data-cy="revenuNetExtraGlobal95"
+            formControlName="revenuNetExtraGlobal95"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtraGlobal96"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal96"
+            >Revenu Taxe Extra Global 96</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtraGlobal96"
+            id="field_revenuTaxeExtraGlobal96"
+            data-cy="revenuTaxeExtraGlobal96"
+            formControlName="revenuTaxeExtraGlobal96"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetTotal97"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotal97"
+            >Revenu Net Total 97</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetTotal97"
+            id="field_revenuNetTotal97"
+            data-cy="revenuNetTotal97"
+            formControlName="revenuNetTotal97"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeTotal98"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotal98"
+            >Revenu Taxe Total 98</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeTotal98"
+            id="field_revenuTaxeTotal98"
+            data-cy="revenuTaxeTotal98"
+            formControlName="revenuTaxeTotal98"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetTotalGlobal99"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotalGlobal99"
+            >Revenu Net Total Global 99</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetTotalGlobal99"
+            id="field_revenuNetTotalGlobal99"
+            data-cy="revenuNetTotalGlobal99"
+            formControlName="revenuNetTotalGlobal99"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeTotalGlobal100"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotalGlobal100"
+            >Revenu Taxe Total Global 100</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeTotalGlobal100"
+            id="field_revenuTaxeTotalGlobal100"
+            data-cy="revenuTaxeTotalGlobal100"
+            formControlName="revenuTaxeTotalGlobal100"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuChambre101"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuChambre101"
+            >Prod Revenu Chambre 101</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuChambre101"
+            id="field_prodRevenuChambre101"
+            data-cy="prodRevenuChambre101"
+            formControlName="prodRevenuChambre101"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuBq102"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuBq102"
+            >Prod Revenu Bq 102</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuBq102"
+            id="field_prodRevenuBq102"
+            data-cy="prodRevenuBq102"
+            formControlName="prodRevenuBq102"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuExtra103"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuExtra103"
+            >Prod Revenu Extra 103</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuExtra103"
+            id="field_prodRevenuExtra103"
+            data-cy="prodRevenuExtra103"
+            formControlName="prodRevenuExtra103"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuTotal104"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuTotal104"
+            >Prod Revenu Total 104</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuTotal104"
+            id="field_prodRevenuTotal104"
+            data-cy="prodRevenuTotal104"
+            formControlName="prodRevenuTotal104"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodChambreNbNuitees105"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodChambreNbNuitees105"
+            >Prod Chambre Nb Nuitees 105</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodChambreNbNuitees105"
+            id="field_prodChambreNbNuitees105"
+            data-cy="prodChambreNbNuitees105"
+            formControlName="prodChambreNbNuitees105"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_techCreateDate106"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techCreateDate106"
+            >Tech Create Date 106</label
+          >
+          <div class="input-group">
+            <input
+              id="field_techCreateDate106"
+              data-cy="techCreateDate106"
+              type="text"
+              class="form-control"
+              name="techCreateDate106"
+              ngbDatepicker
+              #techCreateDate106Dp="ngbDatepicker"
+              formControlName="techCreateDate106"
+            />
+            <button type="button" class="btn btn-secondary" (click)="techCreateDate106Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_techUpdateDate107"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techUpdateDate107"
+            >Tech Update Date 107</label
+          >
+          <div class="input-group">
+            <input
+              id="field_techUpdateDate107"
+              data-cy="techUpdateDate107"
+              type="text"
+              class="form-control"
+              name="techUpdateDate107"
+              ngbDatepicker
+              #techUpdateDate107Dp="ngbDatepicker"
+              formControlName="techUpdateDate107"
+            />
+            <button type="button" class="btn btn-secondary" (click)="techUpdateDate107Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numLigne108"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne108"
+            >Num Ligne 108</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numLigne108"
+            id="field_numLigne108"
+            data-cy="numLigne108"
+            formControlName="numLigne108"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_resort109" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort109"
+            >Resort 109</label
+          >
+          <input type="text" class="form-control" name="resort109" id="field_resort109" data-cy="resort109" formControlName="resort109" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_resvNameId110"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId110"
+            >Resv Name Id 110</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="resvNameId110"
+            id="field_resvNameId110"
+            data-cy="resvNameId110"
+            formControlName="resvNameId110"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientOId111"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId111"
+            >Client O Id 111</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientOId111"
+            id="field_clientOId111"
+            data-cy="clientOId111"
+            formControlName="clientOId111"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeChb112"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb112"
+            >Type Chb 112</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeChb112"
+            id="field_typeChb112"
+            data-cy="typeChb112"
+            formControlName="typeChb112"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_confirmationNo113"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo113"
+            >Confirmation No 113</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="confirmationNo113"
+            id="field_confirmationNo113"
+            data-cy="confirmationNo113"
+            formControlName="confirmationNo113"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientMdmId114"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId114"
+            >Client Mdm Id 114</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientMdmId114"
+            id="field_clientMdmId114"
+            data-cy="clientMdmId114"
+            formControlName="clientMdmId114"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nameId115" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId115"
+            >Name Id 115</label
+          >
+          <input type="number" class="form-control" name="nameId115" id="field_nameId115" data-cy="nameId115" formControlName="nameId115" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_parentResvNameId116"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId116"
+            >Parent Resv Name Id 116</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="parentResvNameId116"
+            id="field_parentResvNameId116"
+            data-cy="parentResvNameId116"
+            formControlName="parentResvNameId116"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_contactId117"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId117"
+            >Contact Id 117</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="contactId117"
+            id="field_contactId117"
+            data-cy="contactId117"
+            formControlName="contactId117"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceId118"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId118"
+            >Agence Id 118</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="agenceId118"
+            id="field_agenceId118"
+            data-cy="agenceId118"
+            formControlName="agenceId118"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceNom119"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom119"
+            >Agence Nom 119</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="agenceNom119"
+            id="field_agenceNom119"
+            data-cy="agenceNom119"
+            formControlName="agenceNom119"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_societeId120"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId120"
+            >Societe Id 120</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="societeId120"
+            id="field_societeId120"
+            data-cy="societeId120"
+            formControlName="societeId120"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_groupeId121"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId121"
+            >Groupe Id 121</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="groupeId121"
+            id="field_groupeId121"
+            data-cy="groupeId121"
+            formControlName="groupeId121"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numBloc122"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc122"
+            >Num Bloc 122</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numBloc122"
+            id="field_numBloc122"
+            data-cy="numBloc122"
+            formControlName="numBloc122"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeResv123"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv123"
+            >Type Resv 123</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeResv123"
+            id="field_typeResv123"
+            data-cy="typeResv123"
+            formControlName="typeResv123"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutResv124"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv124"
+            >Statut Resv 124</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutResv124"
+            id="field_statutResv124"
+            data-cy="statutResv124"
+            formControlName="statutResv124"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDebutResv125"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv125"
+            >Date Debut Resv 125</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDebutResv125"
+              data-cy="dateDebutResv125"
+              type="text"
+              class="form-control"
+              name="dateDebutResv125"
+              ngbDatepicker
+              #dateDebutResv125Dp="ngbDatepicker"
+              formControlName="dateDebutResv125"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDebutResv125Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateFinResv126"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv126"
+            >Date Fin Resv 126</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateFinResv126"
+              data-cy="dateFinResv126"
+              type="text"
+              class="form-control"
+              name="dateFinResv126"
+              ngbDatepicker
+              #dateFinResv126Dp="ngbDatepicker"
+              formControlName="dateFinResv126"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateFinResv126Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateDebutResv127"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv127"
+            >Trunc Date Debut Resv 127</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateDebutResv127"
+              data-cy="truncDateDebutResv127"
+              type="text"
+              class="form-control"
+              name="truncDateDebutResv127"
+              ngbDatepicker
+              #truncDateDebutResv127Dp="ngbDatepicker"
+              formControlName="truncDateDebutResv127"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateDebutResv127Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateFinResv128"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv128"
+            >Trunc Date Fin Resv 128</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateFinResv128"
+              data-cy="truncDateFinResv128"
+              type="text"
+              class="form-control"
+              name="truncDateFinResv128"
+              ngbDatepicker
+              #truncDateFinResv128Dp="ngbDatepicker"
+              formControlName="truncDateFinResv128"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateFinResv128Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateAnnResv129"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv129"
+            >Date Ann Resv 129</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateAnnResv129"
+              data-cy="dateAnnResv129"
+              type="text"
+              class="form-control"
+              name="dateAnnResv129"
+              ngbDatepicker
+              #dateAnnResv129Dp="ngbDatepicker"
+              formControlName="dateAnnResv129"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateAnnResv129Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_pseudoRoomYn130"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn130"
+            >Pseudo Room Yn 130</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="pseudoRoomYn130"
+            id="field_pseudoRoomYn130"
+            data-cy="pseudoRoomYn130"
+            formControlName="pseudoRoomYn130"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_createurResv131"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv131"
+            >Createur Resv 131</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="createurResv131"
+            id="field_createurResv131"
+            data-cy="createurResv131"
+            formControlName="createurResv131"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomCreateurResv132"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv132"
+            >Nom Createur Resv 132</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomCreateurResv132"
+            id="field_nomCreateurResv132"
+            data-cy="nomCreateurResv132"
+            formControlName="nomCreateurResv132"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGarantie133"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie133"
+            >Code Garantie 133</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGarantie133"
+            id="field_codeGarantie133"
+            data-cy="codeGarantie133"
+            formControlName="codeGarantie133"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_flgDed134" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed134"
+            >Flg Ded 134</label
+          >
+          <input type="text" class="form-control" name="flgDed134" id="field_flgDed134" data-cy="flgDed134" formControlName="flgDed134" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePays135"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays135"
+            >Code Pays 135</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePays135"
+            id="field_codePays135"
+            data-cy="codePays135"
+            formControlName="codePays135"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libPays136"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays136"
+            >Lib Pays 136</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libPays136"
+            id="field_libPays136"
+            data-cy="libPays136"
+            formControlName="libPays136"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeNationalite137"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite137"
+            >Code Nationalite 137</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeNationalite137"
+            id="field_codeNationalite137"
+            data-cy="codeNationalite137"
+            formControlName="codeNationalite137"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libNationalite138"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite138"
+            >Lib Nationalite 138</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libNationalite138"
+            id="field_libNationalite138"
+            data-cy="libNationalite138"
+            formControlName="libNationalite138"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeSource139"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource139"
+            >Code Source 139</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeSource139"
+            id="field_codeSource139"
+            data-cy="codeSource139"
+            formControlName="codeSource139"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libSource140"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource140"
+            >Lib Source 140</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libSource140"
+            id="field_libSource140"
+            data-cy="libSource140"
+            formControlName="libSource140"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandSource141"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource141"
+            >Code Grand Source 141</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandSource141"
+            id="field_codeGrandSource141"
+            data-cy="codeGrandSource141"
+            formControlName="codeGrandSource141"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeOrigine142"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine142"
+            >Code Origine 142</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeOrigine142"
+            id="field_codeOrigine142"
+            data-cy="codeOrigine142"
+            formControlName="codeOrigine142"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libOrigine143"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine143"
+            >Lib Origine 143</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libOrigine143"
+            id="field_libOrigine143"
+            data-cy="libOrigine143"
+            formControlName="libOrigine143"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeMarche144"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche144"
+            >Code Marche 144</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeMarche144"
+            id="field_codeMarche144"
+            data-cy="codeMarche144"
+            formControlName="codeMarche144"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libMarche145"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche145"
+            >Lib Marche 145</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libMarche145"
+            id="field_libMarche145"
+            data-cy="libMarche145"
+            formControlName="libMarche145"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandMarche146"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche146"
+            >Code Grand Marche 146</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandMarche146"
+            id="field_codeGrandMarche146"
+            data-cy="codeGrandMarche146"
+            formControlName="codeGrandMarche146"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libGrandMarche147"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche147"
+            >Lib Grand Marche 147</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libGrandMarche147"
+            id="field_libGrandMarche147"
+            data-cy="libGrandMarche147"
+            formControlName="libGrandMarche147"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePrix148"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix148"
+            >Code Prix 148</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePrix148"
+            id="field_codePrix148"
+            data-cy="codePrix148"
+            formControlName="codePrix148"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_categPrix149"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix149"
+            >Categ Prix 149</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="categPrix149"
+            id="field_categPrix149"
+            data-cy="categPrix149"
+            formControlName="categPrix149"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libPrix150"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix150"
+            >Lib Prix 150</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libPrix150"
+            id="field_libPrix150"
+            data-cy="libPrix150"
+            formControlName="libPrix150"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numChb151" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb151"
+            >Num Chb 151</label
+          >
+          <input type="text" class="form-control" name="numChb151" id="field_numChb151" data-cy="numChb151" formControlName="numChb151" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChb152"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb152"
+            >Description Type Chb 152</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChb152"
+            id="field_descriptionTypeChb152"
+            data-cy="descriptionTypeChb152"
+            formControlName="descriptionTypeChb152"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChb153"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb153"
+            >Code Type Chb 153</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChb153"
+            id="field_codeTypeChb153"
+            data-cy="codeTypeChb153"
+            formControlName="codeTypeChb153"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_classChb154"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb154"
+            >Class Chb 154</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="classChb154"
+            id="field_classChb154"
+            data-cy="classChb154"
+            formControlName="classChb154"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_caractChb155"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb155"
+            >Caract Chb 155</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="caractChb155"
+            id="field_caractChb155"
+            data-cy="caractChb155"
+            formControlName="caractChb155"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeChbDeReservation156"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation156"
+            >Type Chb De Reservation 156</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeChbDeReservation156"
+            id="field_typeChbDeReservation156"
+            data-cy="typeChbDeReservation156"
+            formControlName="typeChbDeReservation156"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChbDeResv157"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv157"
+            >Description Type Chb De Resv 157</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChbDeResv157"
+            id="field_descriptionTypeChbDeResv157"
+            data-cy="descriptionTypeChbDeResv157"
+            formControlName="descriptionTypeChbDeResv157"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChbDeResv158"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv158"
+            >Code Type Chb De Resv 158</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChbDeResv158"
+            id="field_codeTypeChbDeResv158"
+            data-cy="codeTypeChbDeResv158"
+            formControlName="codeTypeChbDeResv158"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDeReservation159"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation159"
+            >Statut De Reservation 159</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDeReservation159"
+            id="field_statutDeReservation159"
+            data-cy="statutDeReservation159"
+            formControlName="statutDeReservation159"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribution160"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution160"
+            >Circuit Distribution 160</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribution160"
+            id="field_circuitDistribution160"
+            data-cy="circuitDistribution160"
+            formControlName="circuitDistribution160"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribUserRegroup161"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup161"
+            >Circuit Distrib User Regroup 161</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribUserRegroup161"
+            id="field_circuitDistribUserRegroup161"
+            data-cy="circuitDistribUserRegroup161"
+            formControlName="circuitDistribUserRegroup161"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numCrs162" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs162"
+            >Num Crs 162</label
+          >
+          <input type="text" class="form-control" name="numCrs162" id="field_numCrs162" data-cy="numCrs162" formControlName="numCrs162" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeRefCrs163"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs163"
+            >Type Ref Crs 163</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeRefCrs163"
+            id="field_typeRefCrs163"
+            data-cy="typeRefCrs163"
+            formControlName="typeRefCrs163"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_crsInsertDate164"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate164"
+            >Crs Insert Date 164</label
+          >
+          <div class="input-group">
+            <input
+              id="field_crsInsertDate164"
+              data-cy="crsInsertDate164"
+              type="text"
+              class="form-control"
+              name="crsInsertDate164"
+              ngbDatepicker
+              #crsInsertDate164Dp="ngbDatepicker"
+              formControlName="crsInsertDate164"
+            />
+            <button type="button" class="btn btn-secondary" (click)="crsInsertDate164Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateCreaResv165"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv165"
+            >Date Crea Resv 165</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateCreaResv165"
+              data-cy="dateCreaResv165"
+              type="text"
+              class="form-control"
+              name="dateCreaResv165"
+              ngbDatepicker
+              #dateCreaResv165Dp="ngbDatepicker"
+              formControlName="dateCreaResv165"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateCreaResv165Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datePremier166"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier166"
+            >Date Premier 166</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datePremier166"
+              data-cy="datePremier166"
+              type="text"
+              class="form-control"
+              name="datePremier166"
+              ngbDatepicker
+              #datePremier166Dp="ngbDatepicker"
+              formControlName="datePremier166"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datePremier166Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutPremier167"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier167"
+            >Statut Premier 167</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutPremier167"
+            id="field_statutPremier167"
+            data-cy="statutPremier167"
+            formControlName="statutPremier167"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernier168"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier168"
+            >Date Dernier 168</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernier168"
+              data-cy="dateDernier168"
+              type="text"
+              class="form-control"
+              name="dateDernier168"
+              ngbDatepicker
+              #dateDernier168Dp="ngbDatepicker"
+              formControlName="dateDernier168"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernier168Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernier169"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier169"
+            >Statut Dernier 169</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernier169"
+            id="field_statutDernier169"
+            data-cy="statutDernier169"
+            formControlName="statutDernier169"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernierPseudo170"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo170"
+            >Date Dernier Pseudo 170</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernierPseudo170"
+              data-cy="dateDernierPseudo170"
+              type="text"
+              class="form-control"
+              name="dateDernierPseudo170"
+              ngbDatepicker
+              #dateDernierPseudo170Dp="ngbDatepicker"
+              formControlName="dateDernierPseudo170"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernierPseudo170Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernierPseudo171"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo171"
+            >Statut Dernier Pseudo 171</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernierPseudo171"
+            id="field_statutDernierPseudo171"
+            data-cy="statutDernierPseudo171"
+            formControlName="statutDernierPseudo171"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtCreaAnn172"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn172"
+            >Diff Dt Crea Ann 172</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtCreaAnn172"
+            id="field_diffDtCreaAnn172"
+            data-cy="diffDtCreaAnn172"
+            formControlName="diffDtCreaAnn172"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtArrAnn173"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn173"
+            >Diff Dt Arr Ann 173</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtArrAnn173"
+            id="field_diffDtArrAnn173"
+            data-cy="diffDtArrAnn173"
+            formControlName="diffDtArrAnn173"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_leadtime174"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime174"
+            >Leadtime 174</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="leadtime174"
+            id="field_leadtime174"
+            data-cy="leadtime174"
+            formControlName="leadtime174"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_los175" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los175"
+            >Los 175</label
+          >
+          <input type="number" class="form-control" name="los175" id="field_los175" data-cy="los175" formControlName="los175" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_occupantsGroupe176"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe176"
+            >Occupants Groupe 176</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="occupantsGroupe176"
+            id="field_occupantsGroupe176"
+            data-cy="occupantsGroupe176"
+            formControlName="occupantsGroupe176"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuitee177"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee177"
+            >Nb Nuitee 177</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuitee177"
+            id="field_nbNuitee177"
+            data-cy="nbNuitee177"
+            formControlName="nbNuitee177"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuiteeNnDed178"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed178"
+            >Nb Nuitee Nn Ded 178</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuiteeNnDed178"
+            id="field_nbNuiteeNnDed178"
+            data-cy="nbNuiteeNnDed178"
+            formControlName="nbNuiteeNnDed178"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbResvAnn179"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn179"
+            >Nb Resv Ann 179</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbResvAnn179"
+            id="field_nbResvAnn179"
+            data-cy="nbResvAnn179"
+            formControlName="nbResvAnn179"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbAdu180" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu180"
+            >Nb Adu 180</label
+          >
+          <input type="number" class="form-control" name="nbAdu180" id="field_nbAdu180" data-cy="nbAdu180" formControlName="nbAdu180" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbEnf181" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf181"
+            >Nb Enf 181</label
+          >
+          <input type="number" class="form-control" name="nbEnf181" id="field_nbEnf181" data-cy="nbEnf181" formControlName="nbEnf181" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDayU182"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU182"
+            >Nb Pers Day U 182</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDayU182"
+            id="field_nbPersDayU182"
+            data-cy="nbPersDayU182"
+            formControlName="nbPersDayU182"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersArr183"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr183"
+            >Nb Pers Arr 183</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersArr183"
+            id="field_nbPersArr183"
+            data-cy="nbPersArr183"
+            formControlName="nbPersArr183"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDep184"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep184"
+            >Nb Pers Dep 184</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDep184"
+            id="field_nbPersDep184"
+            data-cy="nbPersDep184"
+            formControlName="nbPersDep184"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersAnn185"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn185"
+            >Nb Pers Ann 185</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersAnn185"
+            id="field_nbPersAnn185"
+            data-cy="nbPersAnn185"
+            formControlName="nbPersAnn185"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersNoshow186"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow186"
+            >Nb Pers Noshow 186</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersNoshow186"
+            id="field_nbPersNoshow186"
+            data-cy="nbPersNoshow186"
+            formControlName="nbPersNoshow186"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDayU187"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU187"
+            >Nb Chb Day U 187</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDayU187"
+            id="field_nbChbDayU187"
+            data-cy="nbChbDayU187"
+            formControlName="nbChbDayU187"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbArr188"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr188"
+            >Nb Chb Arr 188</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbArr188"
+            id="field_nbChbArr188"
+            data-cy="nbChbArr188"
+            formControlName="nbChbArr188"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDep189"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep189"
+            >Nb Chb Dep 189</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDep189"
+            id="field_nbChbDep189"
+            data-cy="nbChbDep189"
+            formControlName="nbChbDep189"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbAnn190"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn190"
+            >Nb Chb Ann 190</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbAnn190"
+            id="field_nbChbAnn190"
+            data-cy="nbChbAnn190"
+            formControlName="nbChbAnn190"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbNoshow191"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow191"
+            >Nb Chb Noshow 191</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbNoshow191"
+            id="field_nbChbNoshow191"
+            data-cy="nbChbNoshow191"
+            formControlName="nbChbNoshow191"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambre192"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre192"
+            >Revenu Net Chambre 192</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambre192"
+            id="field_revenuNetChambre192"
+            data-cy="revenuNetChambre192"
+            formControlName="revenuNetChambre192"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambre193"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre193"
+            >Revenu Taxe Chambre 193</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambre193"
+            id="field_revenuTaxeChambre193"
+            data-cy="revenuTaxeChambre193"
+            formControlName="revenuTaxeChambre193"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambreGlobal194"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal194"
+            >Revenu Net Chambre Global 194</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambreGlobal194"
+            id="field_revenuNetChambreGlobal194"
+            data-cy="revenuNetChambreGlobal194"
+            formControlName="revenuNetChambreGlobal194"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambreGlobal195"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal195"
+            >Revenu Taxe Chambre Global 195</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambreGlobal195"
+            id="field_revenuTaxeChambreGlobal195"
+            data-cy="revenuTaxeChambreGlobal195"
+            formControlName="revenuTaxeChambreGlobal195"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBq196"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq196"
+            >Revenu Net Bq 196</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBq196"
+            id="field_revenuNetBq196"
+            data-cy="revenuNetBq196"
+            formControlName="revenuNetBq196"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBq197"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq197"
+            >Revenu Taxe Bq 197</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBq197"
+            id="field_revenuTaxeBq197"
+            data-cy="revenuTaxeBq197"
+            formControlName="revenuTaxeBq197"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBqGlobal198"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal198"
+            >Revenu Net Bq Global 198</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBqGlobal198"
+            id="field_revenuNetBqGlobal198"
+            data-cy="revenuNetBqGlobal198"
+            formControlName="revenuNetBqGlobal198"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBqGlobal199"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal199"
+            >Revenu Taxe Bq Global 199</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBqGlobal199"
+            id="field_revenuTaxeBqGlobal199"
+            data-cy="revenuTaxeBqGlobal199"
+            formControlName="revenuTaxeBqGlobal199"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtra200"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra200"
+            >Revenu Net Extra 200</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtra200"
+            id="field_revenuNetExtra200"
+            data-cy="revenuNetExtra200"
+            formControlName="revenuNetExtra200"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtra201"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra201"
+            >Revenu Taxe Extra 201</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtra201"
+            id="field_revenuTaxeExtra201"
+            data-cy="revenuTaxeExtra201"
+            formControlName="revenuTaxeExtra201"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtraGlobal202"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal202"
+            >Revenu Net Extra Global 202</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtraGlobal202"
+            id="field_revenuNetExtraGlobal202"
+            data-cy="revenuNetExtraGlobal202"
+            formControlName="revenuNetExtraGlobal202"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtraGlobal203"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal203"
+            >Revenu Taxe Extra Global 203</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtraGlobal203"
+            id="field_revenuTaxeExtraGlobal203"
+            data-cy="revenuTaxeExtraGlobal203"
+            formControlName="revenuTaxeExtraGlobal203"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetTotal204"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotal204"
+            >Revenu Net Total 204</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetTotal204"
+            id="field_revenuNetTotal204"
+            data-cy="revenuNetTotal204"
+            formControlName="revenuNetTotal204"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeTotal205"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotal205"
+            >Revenu Taxe Total 205</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeTotal205"
+            id="field_revenuTaxeTotal205"
+            data-cy="revenuTaxeTotal205"
+            formControlName="revenuTaxeTotal205"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetTotalGlobal206"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetTotalGlobal206"
+            >Revenu Net Total Global 206</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetTotalGlobal206"
+            id="field_revenuNetTotalGlobal206"
+            data-cy="revenuNetTotalGlobal206"
+            formControlName="revenuNetTotalGlobal206"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeTotalGlobal207"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeTotalGlobal207"
+            >Revenu Taxe Total Global 207</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeTotalGlobal207"
+            id="field_revenuTaxeTotalGlobal207"
+            data-cy="revenuTaxeTotalGlobal207"
+            formControlName="revenuTaxeTotalGlobal207"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuChambre208"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuChambre208"
+            >Prod Revenu Chambre 208</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuChambre208"
+            id="field_prodRevenuChambre208"
+            data-cy="prodRevenuChambre208"
+            formControlName="prodRevenuChambre208"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuBq209"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuBq209"
+            >Prod Revenu Bq 209</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuBq209"
+            id="field_prodRevenuBq209"
+            data-cy="prodRevenuBq209"
+            formControlName="prodRevenuBq209"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuExtra210"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuExtra210"
+            >Prod Revenu Extra 210</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuExtra210"
+            id="field_prodRevenuExtra210"
+            data-cy="prodRevenuExtra210"
+            formControlName="prodRevenuExtra210"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodRevenuTotal211"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodRevenuTotal211"
+            >Prod Revenu Total 211</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodRevenuTotal211"
+            id="field_prodRevenuTotal211"
+            data-cy="prodRevenuTotal211"
+            formControlName="prodRevenuTotal211"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_prodChambreNbNuitees212"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.prodChambreNbNuitees212"
+            >Prod Chambre Nb Nuitees 212</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="prodChambreNbNuitees212"
+            id="field_prodChambreNbNuitees212"
+            data-cy="prodChambreNbNuitees212"
+            formControlName="prodChambreNbNuitees212"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_techCreateDate213"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techCreateDate213"
+            >Tech Create Date 213</label
+          >
+          <div class="input-group">
+            <input
+              id="field_techCreateDate213"
+              data-cy="techCreateDate213"
+              type="text"
+              class="form-control"
+              name="techCreateDate213"
+              ngbDatepicker
+              #techCreateDate213Dp="ngbDatepicker"
+              formControlName="techCreateDate213"
+            />
+            <button type="button" class="btn btn-secondary" (click)="techCreateDate213Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_techUpdateDate214"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.techUpdateDate214"
+            >Tech Update Date 214</label
+          >
+          <div class="input-group">
+            <input
+              id="field_techUpdateDate214"
+              data-cy="techUpdateDate214"
+              type="text"
+              class="form-control"
+              name="techUpdateDate214"
+              ngbDatepicker
+              #techUpdateDate214Dp="ngbDatepicker"
+              formControlName="techUpdateDate214"
+            />
+            <button type="button" class="btn btn-secondary" (click)="techUpdateDate214Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numLigne215"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numLigne215"
+            >Num Ligne 215</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numLigne215"
+            id="field_numLigne215"
+            data-cy="numLigne215"
+            formControlName="numLigne215"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_resort216" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resort216"
+            >Resort 216</label
+          >
+          <input type="text" class="form-control" name="resort216" id="field_resort216" data-cy="resort216" formControlName="resort216" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_resvNameId217"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.resvNameId217"
+            >Resv Name Id 217</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="resvNameId217"
+            id="field_resvNameId217"
+            data-cy="resvNameId217"
+            formControlName="resvNameId217"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientOId218"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientOId218"
+            >Client O Id 218</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientOId218"
+            id="field_clientOId218"
+            data-cy="clientOId218"
+            formControlName="clientOId218"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeChb219"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChb219"
+            >Type Chb 219</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeChb219"
+            id="field_typeChb219"
+            data-cy="typeChb219"
+            formControlName="typeChb219"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_confirmationNo220"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.confirmationNo220"
+            >Confirmation No 220</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="confirmationNo220"
+            id="field_confirmationNo220"
+            data-cy="confirmationNo220"
+            formControlName="confirmationNo220"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_clientMdmId221"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.clientMdmId221"
+            >Client Mdm Id 221</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="clientMdmId221"
+            id="field_clientMdmId221"
+            data-cy="clientMdmId221"
+            formControlName="clientMdmId221"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nameId222" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nameId222"
+            >Name Id 222</label
+          >
+          <input type="number" class="form-control" name="nameId222" id="field_nameId222" data-cy="nameId222" formControlName="nameId222" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_parentResvNameId223"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.parentResvNameId223"
+            >Parent Resv Name Id 223</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="parentResvNameId223"
+            id="field_parentResvNameId223"
+            data-cy="parentResvNameId223"
+            formControlName="parentResvNameId223"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_contactId224"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.contactId224"
+            >Contact Id 224</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="contactId224"
+            id="field_contactId224"
+            data-cy="contactId224"
+            formControlName="contactId224"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceId225"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceId225"
+            >Agence Id 225</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="agenceId225"
+            id="field_agenceId225"
+            data-cy="agenceId225"
+            formControlName="agenceId225"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_agenceNom226"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.agenceNom226"
+            >Agence Nom 226</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="agenceNom226"
+            id="field_agenceNom226"
+            data-cy="agenceNom226"
+            formControlName="agenceNom226"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_societeId227"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.societeId227"
+            >Societe Id 227</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="societeId227"
+            id="field_societeId227"
+            data-cy="societeId227"
+            formControlName="societeId227"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_groupeId228"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.groupeId228"
+            >Groupe Id 228</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="groupeId228"
+            id="field_groupeId228"
+            data-cy="groupeId228"
+            formControlName="groupeId228"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_numBloc229"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numBloc229"
+            >Num Bloc 229</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="numBloc229"
+            id="field_numBloc229"
+            data-cy="numBloc229"
+            formControlName="numBloc229"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeResv230"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeResv230"
+            >Type Resv 230</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeResv230"
+            id="field_typeResv230"
+            data-cy="typeResv230"
+            formControlName="typeResv230"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutResv231"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutResv231"
+            >Statut Resv 231</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutResv231"
+            id="field_statutResv231"
+            data-cy="statutResv231"
+            formControlName="statutResv231"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDebutResv232"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDebutResv232"
+            >Date Debut Resv 232</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDebutResv232"
+              data-cy="dateDebutResv232"
+              type="text"
+              class="form-control"
+              name="dateDebutResv232"
+              ngbDatepicker
+              #dateDebutResv232Dp="ngbDatepicker"
+              formControlName="dateDebutResv232"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDebutResv232Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateFinResv233"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateFinResv233"
+            >Date Fin Resv 233</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateFinResv233"
+              data-cy="dateFinResv233"
+              type="text"
+              class="form-control"
+              name="dateFinResv233"
+              ngbDatepicker
+              #dateFinResv233Dp="ngbDatepicker"
+              formControlName="dateFinResv233"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateFinResv233Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateDebutResv234"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateDebutResv234"
+            >Trunc Date Debut Resv 234</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateDebutResv234"
+              data-cy="truncDateDebutResv234"
+              type="text"
+              class="form-control"
+              name="truncDateDebutResv234"
+              ngbDatepicker
+              #truncDateDebutResv234Dp="ngbDatepicker"
+              formControlName="truncDateDebutResv234"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateDebutResv234Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_truncDateFinResv235"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.truncDateFinResv235"
+            >Trunc Date Fin Resv 235</label
+          >
+          <div class="input-group">
+            <input
+              id="field_truncDateFinResv235"
+              data-cy="truncDateFinResv235"
+              type="text"
+              class="form-control"
+              name="truncDateFinResv235"
+              ngbDatepicker
+              #truncDateFinResv235Dp="ngbDatepicker"
+              formControlName="truncDateFinResv235"
+            />
+            <button type="button" class="btn btn-secondary" (click)="truncDateFinResv235Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateAnnResv236"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateAnnResv236"
+            >Date Ann Resv 236</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateAnnResv236"
+              data-cy="dateAnnResv236"
+              type="text"
+              class="form-control"
+              name="dateAnnResv236"
+              ngbDatepicker
+              #dateAnnResv236Dp="ngbDatepicker"
+              formControlName="dateAnnResv236"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateAnnResv236Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_pseudoRoomYn237"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.pseudoRoomYn237"
+            >Pseudo Room Yn 237</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="pseudoRoomYn237"
+            id="field_pseudoRoomYn237"
+            data-cy="pseudoRoomYn237"
+            formControlName="pseudoRoomYn237"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_createurResv238"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.createurResv238"
+            >Createur Resv 238</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="createurResv238"
+            id="field_createurResv238"
+            data-cy="createurResv238"
+            formControlName="createurResv238"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nomCreateurResv239"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nomCreateurResv239"
+            >Nom Createur Resv 239</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomCreateurResv239"
+            id="field_nomCreateurResv239"
+            data-cy="nomCreateurResv239"
+            formControlName="nomCreateurResv239"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGarantie240"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGarantie240"
+            >Code Garantie 240</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGarantie240"
+            id="field_codeGarantie240"
+            data-cy="codeGarantie240"
+            formControlName="codeGarantie240"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_flgDed241" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.flgDed241"
+            >Flg Ded 241</label
+          >
+          <input type="text" class="form-control" name="flgDed241" id="field_flgDed241" data-cy="flgDed241" formControlName="flgDed241" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePays242"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePays242"
+            >Code Pays 242</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePays242"
+            id="field_codePays242"
+            data-cy="codePays242"
+            formControlName="codePays242"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libPays243"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPays243"
+            >Lib Pays 243</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libPays243"
+            id="field_libPays243"
+            data-cy="libPays243"
+            formControlName="libPays243"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeNationalite244"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeNationalite244"
+            >Code Nationalite 244</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeNationalite244"
+            id="field_codeNationalite244"
+            data-cy="codeNationalite244"
+            formControlName="codeNationalite244"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libNationalite245"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libNationalite245"
+            >Lib Nationalite 245</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libNationalite245"
+            id="field_libNationalite245"
+            data-cy="libNationalite245"
+            formControlName="libNationalite245"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeSource246"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeSource246"
+            >Code Source 246</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeSource246"
+            id="field_codeSource246"
+            data-cy="codeSource246"
+            formControlName="codeSource246"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libSource247"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libSource247"
+            >Lib Source 247</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libSource247"
+            id="field_libSource247"
+            data-cy="libSource247"
+            formControlName="libSource247"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandSource248"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandSource248"
+            >Code Grand Source 248</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandSource248"
+            id="field_codeGrandSource248"
+            data-cy="codeGrandSource248"
+            formControlName="codeGrandSource248"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeOrigine249"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeOrigine249"
+            >Code Origine 249</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeOrigine249"
+            id="field_codeOrigine249"
+            data-cy="codeOrigine249"
+            formControlName="codeOrigine249"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libOrigine250"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libOrigine250"
+            >Lib Origine 250</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libOrigine250"
+            id="field_libOrigine250"
+            data-cy="libOrigine250"
+            formControlName="libOrigine250"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeMarche251"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeMarche251"
+            >Code Marche 251</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeMarche251"
+            id="field_codeMarche251"
+            data-cy="codeMarche251"
+            formControlName="codeMarche251"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libMarche252"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libMarche252"
+            >Lib Marche 252</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libMarche252"
+            id="field_libMarche252"
+            data-cy="libMarche252"
+            formControlName="libMarche252"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeGrandMarche253"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeGrandMarche253"
+            >Code Grand Marche 253</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeGrandMarche253"
+            id="field_codeGrandMarche253"
+            data-cy="codeGrandMarche253"
+            formControlName="codeGrandMarche253"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libGrandMarche254"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libGrandMarche254"
+            >Lib Grand Marche 254</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libGrandMarche254"
+            id="field_libGrandMarche254"
+            data-cy="libGrandMarche254"
+            formControlName="libGrandMarche254"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codePrix255"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codePrix255"
+            >Code Prix 255</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codePrix255"
+            id="field_codePrix255"
+            data-cy="codePrix255"
+            formControlName="codePrix255"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_categPrix256"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.categPrix256"
+            >Categ Prix 256</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="categPrix256"
+            id="field_categPrix256"
+            data-cy="categPrix256"
+            formControlName="categPrix256"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_libPrix257"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.libPrix257"
+            >Lib Prix 257</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="libPrix257"
+            id="field_libPrix257"
+            data-cy="libPrix257"
+            formControlName="libPrix257"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numChb258" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numChb258"
+            >Num Chb 258</label
+          >
+          <input type="text" class="form-control" name="numChb258" id="field_numChb258" data-cy="numChb258" formControlName="numChb258" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChb259"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChb259"
+            >Description Type Chb 259</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChb259"
+            id="field_descriptionTypeChb259"
+            data-cy="descriptionTypeChb259"
+            formControlName="descriptionTypeChb259"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChb260"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChb260"
+            >Code Type Chb 260</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChb260"
+            id="field_codeTypeChb260"
+            data-cy="codeTypeChb260"
+            formControlName="codeTypeChb260"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_classChb261"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.classChb261"
+            >Class Chb 261</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="classChb261"
+            id="field_classChb261"
+            data-cy="classChb261"
+            formControlName="classChb261"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_caractChb262"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.caractChb262"
+            >Caract Chb 262</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="caractChb262"
+            id="field_caractChb262"
+            data-cy="caractChb262"
+            formControlName="caractChb262"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeChbDeReservation263"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeChbDeReservation263"
+            >Type Chb De Reservation 263</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeChbDeReservation263"
+            id="field_typeChbDeReservation263"
+            data-cy="typeChbDeReservation263"
+            formControlName="typeChbDeReservation263"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_descriptionTypeChbDeResv264"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.descriptionTypeChbDeResv264"
+            >Description Type Chb De Resv 264</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="descriptionTypeChbDeResv264"
+            id="field_descriptionTypeChbDeResv264"
+            data-cy="descriptionTypeChbDeResv264"
+            formControlName="descriptionTypeChbDeResv264"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_codeTypeChbDeResv265"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.codeTypeChbDeResv265"
+            >Code Type Chb De Resv 265</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="codeTypeChbDeResv265"
+            id="field_codeTypeChbDeResv265"
+            data-cy="codeTypeChbDeResv265"
+            formControlName="codeTypeChbDeResv265"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDeReservation266"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDeReservation266"
+            >Statut De Reservation 266</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDeReservation266"
+            id="field_statutDeReservation266"
+            data-cy="statutDeReservation266"
+            formControlName="statutDeReservation266"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribution267"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribution267"
+            >Circuit Distribution 267</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribution267"
+            id="field_circuitDistribution267"
+            data-cy="circuitDistribution267"
+            formControlName="circuitDistribution267"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_circuitDistribUserRegroup268"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.circuitDistribUserRegroup268"
+            >Circuit Distrib User Regroup 268</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="circuitDistribUserRegroup268"
+            id="field_circuitDistribUserRegroup268"
+            data-cy="circuitDistribUserRegroup268"
+            formControlName="circuitDistribUserRegroup268"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numCrs269" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.numCrs269"
+            >Num Crs 269</label
+          >
+          <input type="text" class="form-control" name="numCrs269" id="field_numCrs269" data-cy="numCrs269" formControlName="numCrs269" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_typeRefCrs270"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.typeRefCrs270"
+            >Type Ref Crs 270</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="typeRefCrs270"
+            id="field_typeRefCrs270"
+            data-cy="typeRefCrs270"
+            formControlName="typeRefCrs270"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_crsInsertDate271"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.crsInsertDate271"
+            >Crs Insert Date 271</label
+          >
+          <div class="input-group">
+            <input
+              id="field_crsInsertDate271"
+              data-cy="crsInsertDate271"
+              type="text"
+              class="form-control"
+              name="crsInsertDate271"
+              ngbDatepicker
+              #crsInsertDate271Dp="ngbDatepicker"
+              formControlName="crsInsertDate271"
+            />
+            <button type="button" class="btn btn-secondary" (click)="crsInsertDate271Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateCreaResv272"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateCreaResv272"
+            >Date Crea Resv 272</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateCreaResv272"
+              data-cy="dateCreaResv272"
+              type="text"
+              class="form-control"
+              name="dateCreaResv272"
+              ngbDatepicker
+              #dateCreaResv272Dp="ngbDatepicker"
+              formControlName="dateCreaResv272"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateCreaResv272Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_datePremier273"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.datePremier273"
+            >Date Premier 273</label
+          >
+          <div class="input-group">
+            <input
+              id="field_datePremier273"
+              data-cy="datePremier273"
+              type="text"
+              class="form-control"
+              name="datePremier273"
+              ngbDatepicker
+              #datePremier273Dp="ngbDatepicker"
+              formControlName="datePremier273"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datePremier273Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutPremier274"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutPremier274"
+            >Statut Premier 274</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutPremier274"
+            id="field_statutPremier274"
+            data-cy="statutPremier274"
+            formControlName="statutPremier274"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernier275"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernier275"
+            >Date Dernier 275</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernier275"
+              data-cy="dateDernier275"
+              type="text"
+              class="form-control"
+              name="dateDernier275"
+              ngbDatepicker
+              #dateDernier275Dp="ngbDatepicker"
+              formControlName="dateDernier275"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernier275Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernier276"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernier276"
+            >Statut Dernier 276</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernier276"
+            id="field_statutDernier276"
+            data-cy="statutDernier276"
+            formControlName="statutDernier276"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_dateDernierPseudo277"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.dateDernierPseudo277"
+            >Date Dernier Pseudo 277</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDernierPseudo277"
+              data-cy="dateDernierPseudo277"
+              type="text"
+              class="form-control"
+              name="dateDernierPseudo277"
+              ngbDatepicker
+              #dateDernierPseudo277Dp="ngbDatepicker"
+              formControlName="dateDernierPseudo277"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateDernierPseudo277Dp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_statutDernierPseudo278"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.statutDernierPseudo278"
+            >Statut Dernier Pseudo 278</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="statutDernierPseudo278"
+            id="field_statutDernierPseudo278"
+            data-cy="statutDernierPseudo278"
+            formControlName="statutDernierPseudo278"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtCreaAnn279"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtCreaAnn279"
+            >Diff Dt Crea Ann 279</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtCreaAnn279"
+            id="field_diffDtCreaAnn279"
+            data-cy="diffDtCreaAnn279"
+            formControlName="diffDtCreaAnn279"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_diffDtArrAnn280"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.diffDtArrAnn280"
+            >Diff Dt Arr Ann 280</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="diffDtArrAnn280"
+            id="field_diffDtArrAnn280"
+            data-cy="diffDtArrAnn280"
+            formControlName="diffDtArrAnn280"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_leadtime281"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.leadtime281"
+            >Leadtime 281</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="leadtime281"
+            id="field_leadtime281"
+            data-cy="leadtime281"
+            formControlName="leadtime281"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_los282" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.los282"
+            >Los 282</label
+          >
+          <input type="number" class="form-control" name="los282" id="field_los282" data-cy="los282" formControlName="los282" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_occupantsGroupe283"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.occupantsGroupe283"
+            >Occupants Groupe 283</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="occupantsGroupe283"
+            id="field_occupantsGroupe283"
+            data-cy="occupantsGroupe283"
+            formControlName="occupantsGroupe283"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuitee284"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuitee284"
+            >Nb Nuitee 284</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuitee284"
+            id="field_nbNuitee284"
+            data-cy="nbNuitee284"
+            formControlName="nbNuitee284"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbNuiteeNnDed285"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbNuiteeNnDed285"
+            >Nb Nuitee Nn Ded 285</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbNuiteeNnDed285"
+            id="field_nbNuiteeNnDed285"
+            data-cy="nbNuiteeNnDed285"
+            formControlName="nbNuiteeNnDed285"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbResvAnn286"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbResvAnn286"
+            >Nb Resv Ann 286</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbResvAnn286"
+            id="field_nbResvAnn286"
+            data-cy="nbResvAnn286"
+            formControlName="nbResvAnn286"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbAdu287" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbAdu287"
+            >Nb Adu 287</label
+          >
+          <input type="number" class="form-control" name="nbAdu287" id="field_nbAdu287" data-cy="nbAdu287" formControlName="nbAdu287" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbEnf288" jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbEnf288"
+            >Nb Enf 288</label
+          >
+          <input type="number" class="form-control" name="nbEnf288" id="field_nbEnf288" data-cy="nbEnf288" formControlName="nbEnf288" />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDayU289"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDayU289"
+            >Nb Pers Day U 289</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDayU289"
+            id="field_nbPersDayU289"
+            data-cy="nbPersDayU289"
+            formControlName="nbPersDayU289"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersArr290"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersArr290"
+            >Nb Pers Arr 290</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersArr290"
+            id="field_nbPersArr290"
+            data-cy="nbPersArr290"
+            formControlName="nbPersArr290"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersDep291"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersDep291"
+            >Nb Pers Dep 291</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersDep291"
+            id="field_nbPersDep291"
+            data-cy="nbPersDep291"
+            formControlName="nbPersDep291"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersAnn292"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersAnn292"
+            >Nb Pers Ann 292</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersAnn292"
+            id="field_nbPersAnn292"
+            data-cy="nbPersAnn292"
+            formControlName="nbPersAnn292"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbPersNoshow293"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbPersNoshow293"
+            >Nb Pers Noshow 293</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbPersNoshow293"
+            id="field_nbPersNoshow293"
+            data-cy="nbPersNoshow293"
+            formControlName="nbPersNoshow293"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDayU294"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDayU294"
+            >Nb Chb Day U 294</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDayU294"
+            id="field_nbChbDayU294"
+            data-cy="nbChbDayU294"
+            formControlName="nbChbDayU294"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbArr295"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbArr295"
+            >Nb Chb Arr 295</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbArr295"
+            id="field_nbChbArr295"
+            data-cy="nbChbArr295"
+            formControlName="nbChbArr295"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbDep296"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbDep296"
+            >Nb Chb Dep 296</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbDep296"
+            id="field_nbChbDep296"
+            data-cy="nbChbDep296"
+            formControlName="nbChbDep296"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbAnn297"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbAnn297"
+            >Nb Chb Ann 297</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbAnn297"
+            id="field_nbChbAnn297"
+            data-cy="nbChbAnn297"
+            formControlName="nbChbAnn297"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_nbChbNoshow298"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.nbChbNoshow298"
+            >Nb Chb Noshow 298</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nbChbNoshow298"
+            id="field_nbChbNoshow298"
+            data-cy="nbChbNoshow298"
+            formControlName="nbChbNoshow298"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambre299"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambre299"
+            >Revenu Net Chambre 299</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambre299"
+            id="field_revenuNetChambre299"
+            data-cy="revenuNetChambre299"
+            formControlName="revenuNetChambre299"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambre300"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambre300"
+            >Revenu Taxe Chambre 300</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambre300"
+            id="field_revenuTaxeChambre300"
+            data-cy="revenuTaxeChambre300"
+            formControlName="revenuTaxeChambre300"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetChambreGlobal301"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetChambreGlobal301"
+            >Revenu Net Chambre Global 301</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetChambreGlobal301"
+            id="field_revenuNetChambreGlobal301"
+            data-cy="revenuNetChambreGlobal301"
+            formControlName="revenuNetChambreGlobal301"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeChambreGlobal302"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeChambreGlobal302"
+            >Revenu Taxe Chambre Global 302</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeChambreGlobal302"
+            id="field_revenuTaxeChambreGlobal302"
+            data-cy="revenuTaxeChambreGlobal302"
+            formControlName="revenuTaxeChambreGlobal302"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBq303"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBq303"
+            >Revenu Net Bq 303</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBq303"
+            id="field_revenuNetBq303"
+            data-cy="revenuNetBq303"
+            formControlName="revenuNetBq303"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBq304"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBq304"
+            >Revenu Taxe Bq 304</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBq304"
+            id="field_revenuTaxeBq304"
+            data-cy="revenuTaxeBq304"
+            formControlName="revenuTaxeBq304"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetBqGlobal305"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetBqGlobal305"
+            >Revenu Net Bq Global 305</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetBqGlobal305"
+            id="field_revenuNetBqGlobal305"
+            data-cy="revenuNetBqGlobal305"
+            formControlName="revenuNetBqGlobal305"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeBqGlobal306"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeBqGlobal306"
+            >Revenu Taxe Bq Global 306</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeBqGlobal306"
+            id="field_revenuTaxeBqGlobal306"
+            data-cy="revenuTaxeBqGlobal306"
+            formControlName="revenuTaxeBqGlobal306"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtra307"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtra307"
+            >Revenu Net Extra 307</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtra307"
+            id="field_revenuNetExtra307"
+            data-cy="revenuNetExtra307"
+            formControlName="revenuNetExtra307"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtra308"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtra308"
+            >Revenu Taxe Extra 308</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtra308"
+            id="field_revenuTaxeExtra308"
+            data-cy="revenuTaxeExtra308"
+            formControlName="revenuTaxeExtra308"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuNetExtraGlobal309"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuNetExtraGlobal309"
+            >Revenu Net Extra Global 309</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuNetExtraGlobal309"
+            id="field_revenuNetExtraGlobal309"
+            data-cy="revenuNetExtraGlobal309"
+            formControlName="revenuNetExtraGlobal309"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            class="form-label"
+            for="field_revenuTaxeExtraGlobal310"
+            jhiTranslate="accessSampleApplicationApp.accessSampleApplicationTable1.revenuTaxeExtraGlobal310"
+            >Revenu Taxe Extra Global 310</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="revenuTaxeExtraGlobal310"
+            id="field_revenuTaxeExtraGlobal310"
+            data-cy="revenuTaxeExtraGlobal310"
+            formControlName="revenuTaxeExtraGlobal310"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
